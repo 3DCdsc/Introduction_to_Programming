@@ -75,6 +75,7 @@ extra:
 nav:
   - Overview: "index.md"
   - Demo: "demo.md"
+  - Download Guides: "download_guides.md"
   - Workshop Materials:
     - Day 1: "Day_1/day_1.md"
     - Day 2:
