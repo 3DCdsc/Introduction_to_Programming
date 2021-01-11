@@ -32,7 +32,7 @@ Open `terminal for macOS` or `windows prompt for Windows` and run the following 
 `pip install beautifulsoup4`
 
 !!! note "What's going on?"
-    We are now installing packages using `pip` which stands for Python Package Manager.
+    We are now installing packages using `pip` which is the Python Package Manager.
     Since python is an open sourced programming language, many other developers have come up with amazing tools to enhance the use of python. These tools are what we call `packages` in which we use `pip` to manage those packages.
     To download a package using pip, we use a shell to interact with the computer.
     Opening `terminal` for macOS or `command prompt` for Windows:
