@@ -32,7 +32,6 @@ Git helps us organize our codebase into snapshots so that one can revert back or
   <img src="../imgs/git/purpose.png" width="1000"/>
 </figure>
 
-
 This can get confusing and is rather prone to human errors. Therefore this is where git comes in to help us organize different stages of development and big fixes.
 
 <a name="overview"></a>
@@ -43,6 +42,9 @@ This can get confusing and is rather prone to human errors. Therefore this is wh
 </figure>
 
 Git models the history and timeline of a bunch of files and folders using a series of snapshots. Each snapshot can be viewed as a state of the entire folder in which git is tracking. It contains information about every file and folder.
+
+!!! TLDR
+    Git works by taking a bunch of snapshots of the state of files. This is like saving your game progress at different checkpoints so you can track your progress or even revert back when needed.
 
 ## Data Model
 
@@ -67,7 +69,6 @@ Each Commit has the following data:
   <img src="../imgs/git/dataModelCommit.png" width="500" />
 </figure>
 
-
 1. id
     A 40 char long String that is used to identify the commit
 
@@ -83,16 +84,23 @@ Each Commit has the following data:
 5.  Snapshot
     The actual id of the tree / folder which contains files / blobs.
 
+!!! TLDR
+    Every commit has information regarding the state of files when the commit was created. It also knows which commit preceeds it and has a message to describe the purpose of the commit.
+
+    A commit / snapshot can have a branch name that can be mapped to locate which commit the branch name refers to. This gives a commit a meaningful name instead of "cf23df2207d99a74fbe169e3eba035e633b65d94"
+
 With each commit being able to be identified by their id. This makes identifying them difficult as the 40 long char Strings are meaningless and not useful to humans. Therefore, git uses branch names which will map a human readable String to the commit's id.
 
-Basically a commit / snapshot can have a branch name that can be mapped to locate which commit the name refers to. 
+!!! note ""
+    Branch names and branching will be covered later on but this should give you a glimpse as to why we need branch names.
+    
 Example as follows:
-
 <figure>
   <img src="../imgs/git/dataModelCommitWithBranchName.png" width="500" />
 </figure>
 
-Git allows for more than 1 branch name and snapshot. This is useful when adding multiple features on your project at the same time. For example, from the current snapshot, u can create a new branch and add in the new feature while working on another branch for another independant feature. After the two features are done, you can then merge them into a single snapshot.
+!!! info "Why do we need branches?"
+    Git allows for more than 1 branch name and snapshot. This is useful when adding multiple features on your project at the same time. For example, from the current snapshot, you can create a new branch and add in the new feature while working on another branch for another independant feature. After the two features are done, you can then merge them into a single snapshot.
 
 Branching example as follows:
 
@@ -108,22 +116,33 @@ Before moving to how to create a snapshot / making a commit. We need to understa
 
 This allow for clean snapshots in which you as the developer can choose how to segment your newly created or edited files into seperate snapshots / commits.
 
-`git add` commands:
-- `git add <filename>` add file into staging area
-- `git add --all` add all files in all directories into staging area
-- `git add .` add all files in current directory into staging area
-- `git rm --cached <filename>` remove a file from the staging area
+!!! info "Why do we need the staging area?"
+    Staging area allows you to be selective in what you want git to keep track of or what to make into a commit.
+
+!!! info "`git add` commands:"
+    - `git add <filename>` add file into staging area
+    - `git add --all` add all files in all directories into staging area
+    - `git add .` add all files in current directory into staging area
+    - `git rm --cached <filename>` remove a file from the staging area
 
 <a name="commits"></a>
 ## Commits
 `git commit` moves the files in the staging area into a snapshot / commit. This can be viewed as a milestone in your project, just like how you frequently save your word documents after every paragraph or what not.
 
-`git commit` commands:
-- `git commit -m "some descriptive commit message" ` Move files in staging area to a snapshot and include a descriptive message
+!!! info "`git commit` commands:"
+    - `git commit -m "some descriptive commit message" ` Move files in staging area to a snapshot and include a descriptive message
 
 <a name="Branching"></a>
 ## Branching
 A branch is basically a pointer that allows for meaningful human readable text to describe a snapshot.
+
+!!! info "Important to understand"
+    A branch is a pointer that maps a meaningful text to a commit's id.
+    
+    Example:
+        `feature/redButton` ---> `cf23df2207d99a74fbe169e3eba035e633b65d94`
+    
+    A branch named `feature/redButton` is referring to the commit with an id of `cf23df2207d99a74fbe169e3eba035e633b65d94`
 
 ### main / master Branch
 Everytime you inialize git, it will automatically create a branch called main or master. You can view this as the main line of development where the live code lives in.
@@ -134,10 +153,11 @@ The HEAD branch is the branch in which points to the current Branch you are curr
 ### Commit in a branch
 Since a branch is just a named pointer, whenever you commit on a different branch, git will create a new snapshot and then move the HEAD and the current branch forward to the new snapshot.
 
-### git checkout
-`git checkout` commands:
-- `git checkout` switches branches.
-- `git checkout -b <new branch name>` creates a new branch as per name passed in as arguement, then switches to it.
+### Git checkout
+The command `git checkout` is used to switch and create branches.
+!!! info "`git checkout` commands:"
+    - `git checkout` switches branches.
+    - `git checkout -b <new branch name>` creates a new branch as per name passed in as arguement, then switches to it.
 
 <a name="Merging"></a>
 ## Merging
