@@ -59,9 +59,5 @@ Open `terminal for macOS` or `windows prompt for Windows` and run the following 
 <a href="https://git-scm.com/download/win" target="_blank">Link to Download Git for windows</a>
 
 !!! note "To test if git is installed"
-    1. macOS
-    Open your `Terminal` application
-    Type the following command: `git --version`
-    2. windows
-    Open your `git bash` application
-    Type the following command: `git --version`
+    1. macOS : Open your `Terminal` application and type the following command: `git --version`
+    2. windows : Open your `git bash` application and type the following command: `git --version`
