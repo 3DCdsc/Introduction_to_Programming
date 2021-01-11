@@ -9,7 +9,7 @@
 
 ### mac OS
 Use the following link to download and follow the on screen instructions.
-<a href="https://www.python.org/downloads/" target="_blank">Link to Download Git for macOS</a>
+<a href="https://www.python.org/downloads/" target="_blank">Link to Download python for macOS</a>
 
 !!! note "Using Homebrew"
     If you are using Homebrew, run the following command:
@@ -17,7 +17,7 @@ Use the following link to download and follow the on screen instructions.
 
 ### Windows
 Use the following link to download and follow the on screen instructions.
-<a href="https://www.python.org/downloads/" target="_blank">Link to Download Git for windows</a>
+<a href="https://www.python.org/downloads/" target="_blank">Link to Download python for windows</a>
 
 <a name="python/packages"></a>
 
