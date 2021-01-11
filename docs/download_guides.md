@@ -13,7 +13,7 @@ Use the following link to download and follow the on screen instructions.
 
 !!! note "Using Homebrew"
     If you are using Homebrew, run the following command:
-        `brew install git`
+        `brew install python`
 
 ### Windows
 Use the following link to download and follow the on screen instructions.
