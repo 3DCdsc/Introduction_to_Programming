@@ -1,24 +1,5 @@
 # 3DC-git-Lecture
 
-# Table of contents
-1. [Why do we need git](#purpose)
-2. [Overview of how git works](#overview)
-3. [Staging / git add](#staging)
-4. [Commits](#commits)
-5. [Branching](#branching)
-6. [Merging](#merge)
-    1. [git merge](#merge/merge)
-    2. [rebase](#merge/rebase)
-7. [Merge Conflicts](#merge-conflict)
-8. [Examples using commands](#Examples-using-commands))
-9. [git utilities](#utilities)
-    1. [git status](#git-status)
-    2. [git log](#git-log)
-    3. [git diff](#git-diff)
-10. [Github / remote](#github)
-    1. [Push / Pull / Fetch](#github/pull-push)
-    2. [Clone](#github/clone)
-
 ## Youtube playlist to accompany notes
 
 <a href="https://www.youtube.com/playlist?list=PL_D88w5Aragp5062QqlgDrUkDl2-kgv79" target="_blank">Link to Youtube Playlist</a>
