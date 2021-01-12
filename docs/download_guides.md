@@ -1,9 +1,4 @@
-# Download Guides
-1. [Python](#python)
-    1. [Python Packages](#python/packages)
-2. [Git](#git)
-
-<a name="python"></a>
+# Environment Setup Guide
 
 ## Python
 
