@@ -1,5 +1,5 @@
 site_name: Introduction to Programming
-site_url: https://3dcdsc.github.io/
+site_url: http://3dc.opensutd.org/Introduction_to_Programming
 docs_dir: docs/
 
 repo_name: 'Introduction_to_Programming'
@@ -74,9 +74,10 @@ extra:
 # Navigation Menu
 nav:
   - Overview: "index.md"
-  - Demo: "demo.md"
-  - Download Guides: "download_guides.md"
+  # - Demo: "demo.md"
   - Workshop Materials:
+    - Day 0:
+      - Setup Environment: "download_guides.md"
     - Day 1: "Day_1/day_1.md"
     - Day 2:
       - Python : "Day_2/day_2.md"
