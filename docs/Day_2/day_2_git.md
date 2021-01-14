@@ -327,7 +327,7 @@ For speicific cases, please refer to this <a href="https://choosealicense.com" t
 
 Otherwise, the `MIT license` is the most common as it allows anyone to do anything with your work.
 
-!!! info "If unsure":
+!!! info "If unsure"
     Always just refer to <a href="https://choosealicense.com" target="_blank">link to choose a license</a> as it lists out each case with specific details.
 
 
