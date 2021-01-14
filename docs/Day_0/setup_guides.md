@@ -4,17 +4,27 @@
 
 ### Google Account
 You will need a google account for the python lessons as we are going to use google collab.
+
 <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjvt_qUzZbuAhWdqksFHeAaDvEQjBAwAXoECAUQAQ&url=https%3A%2F%2Faccounts.google.com%2Fsignup%3Fhl%3Den&usg=AOvVaw3FJJxI-qjWUb2bq_B0_q6t
 " target="_blank">Link to create google account</a>
 
 ### Github Account
 We will be going through the basics of git. Please create an account if you do not have one.
+
 <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwik0YSwzZbuAhWZfH0KHeipAMAQFjAAegQIAxAC&url=https%3A%2F%2Fgithub.com%2Fjoin&usg=AOvVaw0H9TK-nu7JfXaoNeNMgJEk" target="_blank">Link to create github account</a>
+
+## Software
+
+### Postman
+Use the following link to download and follow the on screen instructions.
+
+<a href="https://www.postman.com/downloads/" target="_blank">Link to Download postman</a>
 
 ## Python
 
 ### mac OS
 Use the following link to download and follow the on screen instructions.
+
 <a href="https://www.python.org/downloads/" target="_blank">Link to Download python for macOS</a>
 
 !!! note "Using Homebrew"
@@ -23,6 +33,7 @@ Use the following link to download and follow the on screen instructions.
 
 ### Windows
 Use the following link to download and follow the on screen instructions.
+
 <a href="https://www.python.org/downloads/" target="_blank">Link to Download python for windows</a>
 
 <a name="python/packages"></a>
