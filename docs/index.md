@@ -7,7 +7,10 @@ The 3DC Introduction to Programming is a series of workshops that introduce basi
 ## Day 1: Introduction to programming with Python 
 
 !!! info ""
-    Date & Time: **26 Jan 2021 (Tuesday) 18.30 - 22.30**
+    - Date: **26 Jan 2021 (Tuesday)**
+    - Time: **6.30pm - 10.30pm**
+    - Venue: SUTD i3 Lab (1.605)
+    - Online Venue: [Twitch](https://www.twitch.tv/3dcdsc)
 
 -	Introduction to Programming 
 -	Introduction to Command Line 
@@ -17,7 +20,10 @@ The 3DC Introduction to Programming is a series of workshops that introduce basi
 ## Day 2: Introduction to Git & GitHub, Python Continued 
 
 !!! info ""
-    Date & Time: **28 Jan 2021 (Thursday) 18.30 - 22.30**
+    - Date: **28 Jan 2021 (Thursday)**
+    - Time: **6.30pm - 10.30pm**
+    - Venue: SUTD i3 Lab (1.605)
+    - Online Venue: [Twitch](https://www.twitch.tv/3dcdsc)
 
 -	Introduction to version management tools - Git & GitHub
 -	Python Programming 
@@ -27,7 +33,10 @@ The 3DC Introduction to Programming is a series of workshops that introduce basi
 ## Day 3: Introduction to Web Technologies and Web Scrapping 
 
 !!! info ""
-    Date & Time: **02 Feb 2021 (Tuesday) 18.30 - 22.30**
+    - Date: **02 Feb 2021 (Tuesday)**
+    - Time: **6.30pm - 10.30pm**
+    - Venue: SUTD i3 Lab (1.605)
+    - Online Venue: [Twitch](https://www.twitch.tv/3dcdsc)
 
 -	Introduction to Frontend, Backend technologies 
 -	Introduction to HTTP protocols
@@ -38,7 +47,10 @@ The 3DC Introduction to Programming is a series of workshops that introduce basi
 ## Day 4: Introduction to Web Development with Flask  
 
 !!! info ""
-    Date & Time: **04 Feb 2021 (Thursday) 18.30 - 22.30**
+    - Date: **04 Feb 2021 (Thursday)**
+    - Time: **6.30pm - 10.30pm**
+    - Venue: SUTD i3 Lab (1.605)
+    - Online Venue: [Twitch](https://www.twitch.tv/3dcdsc)
 
 -	Introduction to API
 -	Introduction to Flask 
@@ -48,7 +60,10 @@ The 3DC Introduction to Programming is a series of workshops that introduce basi
 ## Day 5: Build and Deploy your Web App  
 
 !!! info ""
-    Date & Time: **09 Feb 2021 (Tuesday) 18.30 - 22.30**
+    - Date: **09 Feb 2021 (Tuesday)**
+    - Time: **6.30pm - 10.30pm**
+    - Venue: SUTD i3 Lab (1.605)
+    - Online Venue: [Twitch](https://www.twitch.tv/3dcdsc)
 
 -	Introduction to Flask App Deployment 
 -	Hands-on: Build your own Flask App

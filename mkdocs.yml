@@ -77,9 +77,8 @@ nav:
   # - Demo: "demo.md"
   - Workshop Materials:
     - Day 0:
-      - Setup Environment: "download_guides.md"
+      - Setup Environment: "Day_0/setup_guides.md"
     - Day 1: "Day_1/day_1.md"
     - Day 2:
-      - Python : "Day_2/day_2.md"
       - Git : "Day_2/day_2_git.md"
 
