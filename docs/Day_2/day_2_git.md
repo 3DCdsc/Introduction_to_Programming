@@ -242,6 +242,27 @@ To better illustrate how you could visualise basic git commands. We will be goin
 </figure>
 7. To illustrate a fast forward commit, refer to the left of the image for an example of a linear path of commits. You will realise that newBranch2 is simply some form of modification of the main branch. Therefore, git does not need to create another snapshot like what it did previously, but it only needs to update the main pointer to point to the commit in which newBranch2 points to.
 
+<a name="gitignore"></a>
+## gitignore
+If we have files that we want git to always ignore and not track them, we use a `.gitignore` file to list down specific files.
+
+!!! info "Why does the file name have a dot infront?"
+    File with a `.` infront are called `dotfiles`. They are hidden files are hidden from the OS and even the `ls` command doesn't show it. In fact, we need to use `ls -a` in which the `-a` flag tells the command to include hidden files or "all" files.
+
+    > dotfiles are generally used for config files such as gitignore in this case.
+
+`.gitignore` uses a globbing patterns to match file names.
+
+Commonly used pattern are such as:
+
+- `**/folderName` : every file that have a parent directory named `folderName` such as folderName/apiKeys , secret/folderName/apiKeys
+- `*.log` : Any file that has `.log` in it such as apiKeys.log
+
+> No need to memorise such patterns. Google is always your bestfriend.
+
+<a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore#git-ignore-patterns" target="_blank">Link to more information on gitignore patterns</a>
+
+
 <a name="utilities"></a>
 ## git utilities
 Some useful git commands as listed:
@@ -298,3 +319,16 @@ A url can be accessed as follows:
 </figure>
 
 Running `git clone <repo url>` will download the entire repo as a git repo instead of just a zip folder.
+
+### Licenses
+Once your work is made public, it must have a license as all creative work are eligible for intellectual property and copyright protection. A license.txt file in the base directory tells people how and what they are able to do with your work.
+
+For speicific cases, please refer to this <a href="https://choosealicense.com" target="_blank">link to choose a license</a>.
+
+Otherwise, the `MIT license` is the most common as it allows anyone to do anything with your work.
+
+!!! info "If unsure":
+    Always just refer to <a href="https://choosealicense.com" target="_blank">link to choose a license</a> as it lists out each case with specific details.
+
+
+
