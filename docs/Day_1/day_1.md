@@ -32,7 +32,7 @@
 
 > EASY to read, debug, build up and extend
 
-# Variables
+## Variables
 
 Variables are often described as boxes you can store values in.
 This idea can be helpful the first few times you use a variable, but it’s muchbetter to think of variables as labels that you can assign to values. 
@@ -98,9 +98,9 @@ because they could be confused with the numbers 1 and 0.
 
 !!! note "NOT ALLOWED: Will throw error"
 
-        # 5five = 10 (Starting with a number)
-        # my var = 10 (Using spaces)
-        # my_var* = 10 (Using special symbols)
+         5five = 10 (Starting with a number)
+         my var = 10 (Using spaces)
+         my_var* = 10 (Using special symbols)
 
 
 ## Some in-built functions
