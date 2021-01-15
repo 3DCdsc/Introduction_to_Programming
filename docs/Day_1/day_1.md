@@ -23,6 +23,21 @@ Computer coding is the use of computer **programming** **languages**  to give co
   
 Allows us to create computer software like programs, operating systems, and mobile apps.
 
+Without coding, computers would literally do nothing. They would be completely useless. That’s because source code is the set of instructions that tells the computer what to do. Computers have no free will, after all, so without explicit instruction, they’re just sophisticated hunks of metal.
+
+Think of anything you’ve ever done with a computer:
+
+* Play a video game.
+* Send an email.
+* Search for something on Google.
+* Write a word document.
+* Take a selfie on your smartphone (also a computer).
+* Buy something on Amazon.
+* Watch a movie on Netflix.
+
+All of those applications are software written in code.
+
+
 
 ## Why Python?
 
@@ -32,16 +47,42 @@ Allows us to create computer software like programs, operating systems, and mobi
 
 > EASY to read, debug, build up and extend
 
+
+following is the the Python code that literally tells the computer to print 'I am awesome':
+
+    print(“ I am awesome ”)
+
+when in Java it is
+
+    public class HelloWorld {
+
+        public static void main(String[] args) {
+            
+            System.out.println("I am awesome");
+        }
+
+    }
+
+And in C++ it is:
+
+    #include <iostream>
+    int main() {
+    std::cout << "I'am awesome.\n";
+    }
+    
+
 ## Variables
 
 Variables are often described as boxes you can store values in.
 This idea can be helpful the first few times you use a variable, but it’s much better to think of variables as labels that you can assign to values. 
 You can also say that a variable references a certain value.
 
-A variable can be assigned to different types of values. 
+!!!note "Data type"
+          an attribute of data which tells the compiler or interpreter how the programmer intends to use the data
+          
+          A variable can be assigned to different types of values. 
 
 What are the basic data types?
-
 
 > Some basic data types in Python are:
 
@@ -52,7 +93,7 @@ What are the basic data types?
 
 
 > Composite data types in Python :
-We will be exploring these data types in detail
+  We will be exploring these data types in detail
 
 *   **list** : A list is a collection of items in a particular order
 *   **dict**: A dictionary in Python is a collection of key-value pairs. Each key is connected
@@ -284,6 +325,7 @@ print(my_var[::-1])
 !!! note  "Practice 1"
         Print 'I Love Coding' from the string below
         s = "3DC'20 - I Love Coding!"
+       
 
 
 ### Strings are immutable
@@ -308,11 +350,25 @@ s = s + " concatenate me"
 print(s)
 ```
 
-!!!note "How does the multiplication operator behave with strings ?" 
-```python
-length = "z"
-print(length *3)
-```
+!!! note "How does the multiplication operator behave with strings ?" 
+          ```python
+          length = "z"
+          print(length *3)
+          ```
+          
+!!! note "Practice 2"
+          Suppose you had a person's name in a variable:
+
+          myName = "Kenny Carney"
+
+          However, you want the surname Carney first and then the first name of Kenny. Use slicing to print out Carney Kenny.
+
+          Remember: you can use the plus symbol and spaces to concatenate:  print(surname + " " + firstName)
+
+!!! note "Advanced Practice : Palindromes"
+          Given a string, write a code to check if it is palindrome or not.
+          A string is said to be palindrome if the reverse of the string is the same as string.
+          For example, “radar” is a palindrome, but “radix” is not a palindrome.
 
 ## Introduction to Lists
 
@@ -502,6 +558,28 @@ print(a is b)
 print(a == b)
 ```
 
+!!! note "**Practice 3**" 
+  ```python
+  #1. What will the below code produce?
+
+  x = [0,1,2,3,4,5]
+  x == x[:3] + x[3:]
+  ```
+
+!!! note "**Practice 4**" 
+      Given a list, write a code that swaps the list elements at indices index1 and index2.
+
+      It does not modify the original list, but returns a new list.
+
+      Important note : Do keep in mind that the indices given could be *negative* as well
+
+      I have started the code for you 
+```python
+      ls = [3, 6, 8, 2]
+      index1 = int(input(" Enter index 1 value :"))
+      index2 = int(input(" Enter index 2 value:")) 
+ ```
+
 ## Dictionaries
 
 We've been learning about sequences in Python but now we're going to switch gears and learn about mappings in Python. If you're familiar with other languages you can think of these Dictionaries as hash tables.
@@ -649,12 +727,13 @@ Objects that we've learned about that we can iterate over include strings, lists
 
 Here's the general format for a  ```for``` loop in Python:
 
-     ```python
+```python
     for item in object:
         statements to do stuff
-     ```
+```
 
-## While loop
+## while loop
+
 A bit similar to for loop, but it keeps running until the condition is false
 The main difference between for loop and while loop is 
     * for loop is used in situations where you know the number of iterations to go through
