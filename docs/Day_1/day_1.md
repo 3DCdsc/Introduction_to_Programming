@@ -167,7 +167,7 @@ print(type(letter1))
 ## Operators 
 
 **Arithmetic Operators:**
- ```python
+```python
 x = 15
 y = 4
 
@@ -648,10 +648,11 @@ A ```for``` loop acts as an iterator in Python; it goes through items that are i
 Objects that we've learned about that we can iterate over include strings, lists, tuples, and even built-in iterables for dictionaries, such as keys or values.
 
 Here's the general format for a  ```for``` loop in Python:
+
      ```python
     for item in object:
         statements to do stuff
-        ```
+     ```
 
 ## While loop
 A bit similar to for loop, but it keeps running until the condition is false
@@ -669,10 +670,11 @@ while index < 5:
   index += 1
 print(index)
 ```
-!!! note "Practice" 
-         one of the important application of while loop is to validate input from user
-         prompt the user to input their gender and if its not M or F you will notify them that its wrong input and ask them to input again
-        
+!!! note "Practice"
+              one of the important application of while loop is to validate input from user
+              prompt the user to input their gender and if its not M or F you will notify them that its wrong input and ask them to input again
+              
+
     
 
 
