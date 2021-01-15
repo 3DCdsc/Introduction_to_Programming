@@ -1,6 +1,12 @@
 # Introduction to Programming
 
-The 3DC Introduction to Programming is a series of workshops that introduce basic but crucial programming concepts to complete beginners who are keen to enter the world of computer science/ software engineering. In addition, this workshop also prepares you for the first-year programming modules at SUTD, give you a great head start. The workshop will start from the introduction of programming using Python and continue to cover Git, Command-Line Interface, Web Development, API, and many more important topics. By the end of this workshop series, you should be capable of building and deploying your own simple applications, and more importantly, you will have a great starting point to self-learn anything in the world of programming.
+The 3DC Introduction to Programming is a series of workshops that introduce basic but crucial programming concepts to complete beginners who are keen to enter the world of computer science/ software engineering. In addition, this workshop also prepares you for the first-year programming module (Computational Thinking for Design) at SUTD, give you a great head start. 
+
+By the end of this workshop series, you should be capable of building and deploying your own simple applications, and more importantly, you will have a great starting point to self-learn anything in the world of programming.
+
+- Early-Mats round time period: **26 Jan 2021** to **09 Feb 2021**.
+- [Sign up](https://forms.office.com/Pages/ResponsePage.aspx?id=drd2NJDpck-5UGJImDFiPT7laIF8QHhDuji50dJ_xY1UMFNVTDJYSlY0SEEwR09LQ0tIWElQVzJXQi4u) now!
+- Session details as follows.
 
 --- 
 
