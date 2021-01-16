@@ -735,9 +735,11 @@ Here's the general format for a  ```for``` loop in Python:
 ## while loop
 
 A bit similar to for loop, but it keeps running until the condition is false
+
 The main difference between for loop and while loop is 
     * for loop is used in situations where you know the number of iterations to go through
     * while loop is used in situations where you do not know the number of iterations to go through but you know what is the condition that it should stop
+    
 ```python
 # Only when the condition behind the while statement is True, then only  it will enter the loop
 # So do remember to update the condition for you to exit the while loop.
