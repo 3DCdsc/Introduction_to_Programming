@@ -5,6 +5,9 @@ You may use this youtube playlist to accompany the lecture notes:
 <a href="https://www.youtube.com/playlist?list=PL_D88w5Aragp5062QqlgDrUkDl2-kgv79" target="_blank">Link to 
 Youtube Playlist</a>
 
+Lecture Notes:
+<a href="/Day_2/git_lecture.pdf" target="_blank">Link to PDF version of lecture notes</a>
+
 ## Why should you learn Git?
 Git is the de facto version control system in which most developers and companies use. Learning the basics will greatly enhance your internship / career in the future. It will also enable you to collaborate easily with other open sourced projects and even your school projects.
 
