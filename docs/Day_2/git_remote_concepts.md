@@ -23,7 +23,7 @@ Another way of getting updates from the remote repo, we also can use
     Therefore `git pull` actually calls `git fetch` and `git merge FETCH_HEAD` automatically.
 
 <figure>
-  <img src="../imgs/git/fetch_pull.png" width="500"/>
+  <img src="../imgs/git/fetch-pull.png" width="500"/>
 </figure>
 
 ## Clone
