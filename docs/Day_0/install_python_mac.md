@@ -10,7 +10,7 @@
 
 ??? question "What is a Vanilla Install?"
 
-	'Vanilla Install' simply means 'not customized from their original form'.
+	**Vanilla Install** simply means *not customized from their original form*.
 
 ??? question "What is Anaconda Python?"
 
