@@ -50,26 +50,29 @@ All of those applications are software written in code.
 
 following is the the Python code that literally tells the computer to print 'I am awesome':
 
-    print(“ I am awesome ”)
+```python linenums="1"
+print("I am awesome")
+```
 
 when in Java it is
 
-    public class HelloWorld {
-
-        public static void main(String[] args) {
-            
-            System.out.println("I am awesome");
-        }
-
+```java linenums="1"
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("I am awesome");
     }
+}
+```
 
 And in C++ it is:
 
-    #include <iostream>
-    int main() {
-    std::cout << "I'am awesome.\n";
-    }
-    
+``` c++ linenums="1"
+#include <iostream>
+
+int main() {
+  std::cout << "I'am awesome.\n";
+}
+```  
 
 ## Variables
 
