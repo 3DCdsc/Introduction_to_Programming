@@ -78,6 +78,7 @@ nav:
   - Workshop Materials:
     - Day 0:
       - Setup Environment: "Day_0/setup_guides.md"
+      - Install Git: "Day_0/install_git.md"
     - Day 1: 
       - Python Basics: "Day_1/python_basics.md"
     - Day 2:
