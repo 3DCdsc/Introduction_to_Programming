@@ -2,8 +2,8 @@ site_name: Introduction to Programming
 site_url: http://3dc.opensutd.org/Introduction_to_Programming
 docs_dir: docs/
 
-repo_name: 'Introduction_to_Programming'
-repo_url: 'https://github.com/3DCdsc/Introduction_to_Programming'
+repo_name: "Introduction_to_Programming"
+repo_url: "https://github.com/3DCdsc/Introduction_to_Programming"
 
 # Copyright
 copyright: Digital Design and Development Club (3DC) &copy; 2019 - 2021. All rights reserved.
@@ -76,14 +76,17 @@ nav:
   - Overview: "index.md"
   # - Demo: "demo.md"
   - Workshop Materials:
-    - Day 0:
-      - Setup Environment: "Day_0/setup_guides.md"
-      - Install Git: "Day_0/install_git.md"
-      - Install Python:
-        - on macOS: "Day_0/install_python_mac.md"
-        - on Windows: "Day_0/install_python_win.md"
-    - Day 1: 
-      - Python Basics: "Day_1/python_basics.md"
-    - Day 2:
-      - Git : "Day_2/git.md"
-
+      - Day 0:
+          - Setup Environment: "Day_0/setup_guides.md"
+          - Install Git: "Day_0/install_git.md"
+          - Install Python:
+              - on macOS: "Day_0/install_python_mac.md"
+              - on Windows: "Day_0/install_python_win.md"
+      - Day 1:
+          - Python Basics: "Day_1/python_basics.md"
+      - Day 2:
+          - Git: "Day_2/git.md"
+      - Day 3:
+          - Web Basics: "Day_3/web_basics.md"
+      - Day 4:
+          - Server Basics: "Day_4/server_basics.md"
