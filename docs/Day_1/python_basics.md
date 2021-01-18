@@ -135,7 +135,7 @@ than length_of_persons_name.
 
 - Be careful when using the lowercase letter l and the uppercase letter O because they could be confused with the numbers 1 and 0.
 
-!!! note "NOT ALLOWED: Will throw error"
+**NOT ALLOWED: Will throw error**
 
    5five = 10 (Starting with a number)
 
@@ -145,7 +145,7 @@ than length_of_persons_name.
 
 
 ## Some in-built functions
-- **print()** : the print() function is an in-built function of Python which is used to print the specified message to the screen or other standard output device.
+**print()** : the print() function is an in-built function of Python which is used to print the specified message to the screen or other standard output device.
 
 ```python
 print("Hello, World!")
@@ -163,15 +163,15 @@ print(message, second_message)
 ```
 What if you want to know what data type is the variable?
 
-- **type()** : this in-built function is used to determine the data type of the variable
-
+**type()** : this in-built function is used to determine the data type of the variable
 ```python
 print(type(message))
 type(2) 
- ```
- Suppose you don't know what value should be assigned to your variable and want to ask the user for the value. you can do this using **input()**
+```
+ 
+Suppose you don't know what value should be assigned to your variable and want to ask the user for the value. you can do this using **input()**
 
-- **input()** method reads a line from input, converts into a string and returns it.
+**input()** method reads a line from input, converts into a string and returns it.
 
 ```python
 message = input()
@@ -198,6 +198,7 @@ num = 1
 num= str(num)
 print(num)
 print(type(num))
+
 ```
 
 How about converting str to int?
@@ -282,6 +283,7 @@ print('not x is',not x)
 In normal mathematics expressions:
 
 var = 0
+
 var = var +1   would mean 0 = 1
 
 But in python, the same expression has a different meaning .
@@ -295,11 +297,11 @@ A string is a series of characters. Anything inside quotes is considered
 a string in Python, and you can use single or double quotes around your
 strings :
 
-I told my friend, "Python is my favorite language!"'
+- I told my friend, "Python is my favorite language!"'
 
-"The language 'Python' is named after Monty Python, not the snake."
+- "The language 'Python' is named after Monty Python, not the snake."
 
-"One of Python's strengths is its diverse and supportive community."
+- "One of Python's strengths is its diverse and supportive community."
 
 
 
@@ -329,7 +331,8 @@ print(my_var[0:4:2])
 # Reversing a string
 print(my_var[::-1])
 ```
-**Practice 1**
+**Practice 1 :**
+
 Print 'I Love Coding' from the string below
 s = "3DC'20 - I Love Coding!"
 
@@ -357,13 +360,14 @@ s = s + " concatenate me"
 print(s)
 ```
 
-"How does the multiplication operator behave with strings ?" 
+How does the multiplication operator behave with strings ? 
 ```python
 length = "z"
 print(length *3)
 ```
           
-**Practice 2**
+**Practice 2: **
+
 Suppose you had a person's name in a variable:
 
 myName = "Kenny Carney"
@@ -372,7 +376,9 @@ However, you want the surname Carney first and then the first name of Kenny. Use
 
 Remember: you can use the plus symbol and spaces to concatenate:  print(surname + " " + firstName)
 
+
 **Advanced Practice : Palindromes**
+
 Given a string, write a code to check if it is palindrome or not.
 A string is said to be palindrome if the reverse of the string is the same as string.
 For example, “radar” is a palindrome, but “radix” is not a palindrome.
@@ -391,14 +397,13 @@ print(bicycles)
 
 Lists are ordered collections, so you can access any element in a list by telling Python the position, or index, of the item desired
 
-!!!note "NOTE"
-        Python considers the first item in a list to be at position 0, not position 1.
+- Python considers the first item in a list to be at position 0, not position 1.
         
 ```python
 print(bicycles[0])
 ``` 
 
-To access elements from the back of a list, use a negative index.
+- To access elements from the back of a list, use a negative index.
 
 An index of -1 would access the last element, -2 would access the second last element and so on. 
 ```python
@@ -406,6 +411,7 @@ a = [1, 1.0, 'python', True]
 print( a[-1])
 print( a[-2] )
 ```
+
 ### Lists are mutable
 You do this by referencing the element of the list and assigning a new object to it. 
 ```python
@@ -434,6 +440,7 @@ b = []
 print(a, b)
 print(len(a), len(b))
 ```
+
 Using **range()**
 
 range() function is used to produce numbers using a start, stop, step 
@@ -448,7 +455,7 @@ As the ```range()``` function is not a list, you need to pass it to the ```list(
 ```python
  ls = list( range(10))
  print(ls)
- ```
+```
 
 ### **Methods** of Lists
 
@@ -491,7 +498,7 @@ The **in** Keyword
 a = ['horse', 'cat', 'dog', 'chicken', 'rat','duck', 'pigeon']
 print('cat' in a)
 print('donkey' in a)
- ```
+```
 
 The "+", " * " and "=="  operators with lists 
 
@@ -500,12 +507,12 @@ Recall that the "+" operator behaves differently with two numbers compared to tw
 The "+"and " * "  operators behave differently with lists, compared to the numeric datatypes. 
 
 - The "+" operator performs concatenation when both its operands are lists. 
-  ```python
-  a = [1, 2, 3]
-  b = [7, 8, 9]
-  c = a + b
-  print(c)
-  ```
+```python
+a = [1, 2, 3]
+b = [7, 8, 9]
+c = a + b
+print(c)
+```
 
 - The " * " operator works with a list and an integer. 
 ```python
@@ -516,7 +523,6 @@ print(c)
 
 - The " == " operator checks the equality of two lists. This includes the length and all the elements in the list
 ```python
-
 a = [1, 2, 3]
 b = [3, 1, 2]
 c = [1, 2, 3]
@@ -578,18 +584,19 @@ x == x[:3] + x[3:]
 ```
 
 **Practice 4**
-  Given a list, write a code that swaps the list elements at indices index1 and index2.
 
-  It does not modify the original list, but returns a new list.
+Given a list, write a code that swaps the list elements at indices index1 and index2.
 
-  Important note : Do keep in mind that the indices given could be *negative* as well
+It does not modify the original list, but returns a new list.
 
-  I have started the code for you 
+Important note : Do keep in mind that the indices given could be *negative* as well
+
+I have started the code for you 
 ```python
       ls = [3, 6, 8, 2]
       index1 = int(input(" Enter index 1 value :"))
       index2 = int(input(" Enter index 2 value:")) 
- ```
+```
 
 ## Dictionaries
 
@@ -631,6 +638,7 @@ d = {'k1': [1,2,{'k2':[["Hello!"]]}]}
 d['k1'][2]['k2'][0][0]
 ```
 **Practice**
+
 Retrieve 'Coding is fun unless you're doing it wrong'
 ```python
 d = {'k1':[1,2,{'k2':['pls do not do this',{'have fun':[1,2,['Coding is fun unless you\'re doing it wrong', 1, 2]]}]}]}
@@ -748,8 +756,10 @@ Here's the general format for a  ```for``` loop in Python:
 A bit similar to for loop, but it keeps running until the condition is false
 
 The main difference between for loop and while loop is 
-    * for loop is used in situations where you know the number of iterations to go through
-    * while loop is used in situations where you do not know the number of iterations to go through but you know what is the condition that it should stop
+
+- for loop is used in situations where you know the number of iterations to go through
+
+- while loop is used in situations where you do not know the number of iterations to go through but you know what is the condition that it should stop
     
 ```python
 # Only when the condition behind the while statement is True, then only  it will enter the loop
@@ -771,13 +781,19 @@ prompt the user to input their gender and if its not M or F you will notify them
 
 1. Write a function to print the following pattern using for/ while loops : 
             *
+            
             **
+            
             ***
+            
             ****
+            
             *****
              
 2. Factorial of a number n is represented by n! and is equal to 1 * 2 * 3 * .... * (n-1) * n
+
     5! = 5 * 4 * 3 * 2 * 1 = 120
+    
     Write a program to calculate the factorial of a number given by the user
     
             
