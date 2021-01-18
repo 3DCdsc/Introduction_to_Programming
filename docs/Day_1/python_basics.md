@@ -3,16 +3,16 @@
 
 
 
-*   What is Coding? Why Python?
-*   Variables and simple data types
-*   Operators
-*   Strings
-*   Introduction to Lists
-*   Dictionaries
-*   Tuples
-*   Sets
-*   **If** statements 
-*  loops: **while** and **for**
+- What is Coding? Why Python?
+- Variables and simple data types
+- Operators
+- Strings
+- Introduction to Lists
+- Dictionaries
+- Tuples
+- Sets
+- **If** statements 
+- loops: **while** and **for**
 
 
 
@@ -27,13 +27,13 @@ Without coding, computers would literally do nothing. They would be completely u
 
 Think of anything you’ve ever done with a computer:
 
-* Play a video game.
-* Send an email.
-* Search for something on Google.
-* Write a word document.
-* Take a selfie on your smartphone (also a computer).
-* Buy something on Amazon.
-* Watch a movie on Netflix.
+- Play a video game.
+- Send an email.
+- Search for something on Google.
+- Write a word document.
+- Take a selfie on your smartphone (also a computer).
+- Buy something on Amazon.
+- Watch a movie on Netflix.
 
 All of those applications are software written in code.
 
@@ -41,12 +41,12 @@ All of those applications are software written in code.
 
 ## Why Python?
 
-> Incredibly efficient language
+1. Incredibly efficient language
 
-> "Clean code"
+2. "Clean code"
 
-> EASY to read, debug, build up and extend
-
+3. EASY to read, debug, build up and extend
+ 
 
 following is the the Python code that literally tells the computer to print 'I am awesome':
 
@@ -87,24 +87,24 @@ You can also say that a variable references a certain value.
 
 What are the basic data types?
 
-> Some basic data types in Python are:
+Some basic data types in Python are:
 
-*   **int** : integer data type. Stores numbers without decimal points 
-*   **float** : float data type. Stores decimal numbers with floating points
-*   **str** : sequences of character data. We will be going into further detail later.
-*   **boolean** : Objects of Boolean type may have one of two values, True or False
+- **int** : integer data type. Stores numbers without decimal points 
+- **float** : float data type. Stores decimal numbers with floating points
+- **str** : sequences of character data. We will be going into further detail later.
+- **boolean** : Objects of Boolean type may have one of two values, True or False
 
 
-> Composite data types in Python :
-  We will be exploring these data types in detail
+Composite data types in Python :
+ We will be exploring these data types in detail
 
-*   **list** : A list is a collection of items in a particular order
-*   **dict**: A dictionary in Python is a collection of key-value pairs. Each key is connected
+- **list** : A list is a collection of items in a particular order
+- **dict**: A dictionary in Python is a collection of key-value pairs. Each key is connected
 to a value, and you can use a key to access the value associated with that key
-*   **tuple** : A tuple looks just like a list except you use parentheses instead of square
+- **tuple** : A tuple looks just like a list except you use parentheses instead of square
 brackets. 
-*   **set** : Sets are used to store multiple items in a single variable
-*   **frozenset** :frozenset is same as set except its elements cannot be changed.
+- **set** : Sets are used to store multiple items in a single variable
+- **frozenset** :frozenset is same as set except its elements cannot be changed.
 
 
 
@@ -114,7 +114,7 @@ Now let's see how to assign a variable the right way!
 
 Rules for Variable Names: 
 
-•  Variable names can contain only letters, numbers, and underscores.
+-  Variable names can contain only letters, numbers, and underscores.
 They can start with a letter or an underscore, but not with a number.
 For instance, you can call a variable message_1 but not 1_message.
 
@@ -123,64 +123,64 @@ The following special symbols also cannot be used in a variable name:
     :'",<>/?|\!@#%^&*~-+
 
 
-•	 Spaces are not allowed in variable names, but underscores can be used
+-  Spaces are not allowed in variable names, but underscores can be used
 to separate words in variable names. For example, *greeting_message*
 works, but *greeting message* will cause errors.
 
-•	 Avoid using Python keywords and function names as variable names
-
-!!! note "What are **keywords**? "
-        They are words that Python has reserved for a particular programmatic purpose. Some examples of keywords are : **print**, **input**, **type**. 
+-	 Avoid using Python keywords and function names as variable names.  Keywords are words that Python has reserved for a particular programmatic purpose. Some examples of keywords are : **print**, **input**, **type**. 
 
 
-•	 Variable names should be short but descriptive. For example, name is
-better than n, student_name is better than s_n, and name_length is better
+- Variable names should be short but descriptive. For example, name is better than n, student_name is better than s_n, and name_length is better
 than length_of_persons_name.
 
-•	 Be careful when using the lowercase letter l and the uppercase letter O
-because they could be confused with the numbers 1 and 0.
+- Be careful when using the lowercase letter l and the uppercase letter O because they could be confused with the numbers 1 and 0.
 
 !!! note "NOT ALLOWED: Will throw error"
 
-         5five = 10 (Starting with a number)
-         
-         my var = 10 (Using spaces)
-         
-         my_var* = 10 (Using special symbols)
+   5five = 10 (Starting with a number)
+
+   my var = 10 (Using spaces)
+
+   my_var* = 10 (Using special symbols)
 
 
 ## Some in-built functions
-* **print()** : the print() function is an in-built function of Python which is used to print the specified message to the screen or other standard output device.
-    ```python
-    print("Hello, World!")
-    ```
-    let's assign a variable and print it!
-    ```python
-    message = 2
-    print(message) # this prints the value stored in the variable message 
+- **print()** : the print() function is an in-built function of Python which is used to print the specified message to the screen or other standard output device.
 
-    #you can print more than one variable at a time by:
-    second_message = 1
-    print(message, second_message) 
-    ```
-    What if you want to know what data type is the variable?
+```python
+print("Hello, World!")
+```
 
-* **type()** : this in-built function is used to determine the data type of the variable
-    ```python
-    print(type(message))
-    type(2) 
-     ```
-* Suppose you don't know what value should be assigned to your variable and want to ask the user for the value. you can do this using **input()**
+let's assign a variable and print it!
 
-  **input()** method reads a line from input, converts into a string and returns it.
-    ```python
-    message = input()
-    print("You entered: " , message)
-    
-    #Suppose you want to print a message to the user for asking the value
-    second_message = input("Please enter a number")
-    print(second_message)
-    ```
+```python
+message = 2
+print(message) # this prints the value stored in the variable message 
+
+#you can print more than one variable at a time by:
+second_message = 1
+print(message, second_message) 
+```
+What if you want to know what data type is the variable?
+
+- **type()** : this in-built function is used to determine the data type of the variable
+
+```python
+print(type(message))
+type(2) 
+ ```
+ Suppose you don't know what value should be assigned to your variable and want to ask the user for the value. you can do this using **input()**
+
+- **input()** method reads a line from input, converts into a string and returns it.
+
+```python
+message = input()
+print("You entered: " , message)
+
+#Suppose you want to print a message to the user for asking the value
+second_message = input("Please enter a number")
+print(second_message)
+```
 
 
 
@@ -189,7 +189,8 @@ because they could be confused with the numbers 1 and 0.
 Data types can be converted from one form to another using in-built functions like int(), str(), float().
 However, do note that **not** every conversion is possible!
 
-> Can you convert an int type to a string type? 
+Can you convert an int type to a string type? 
+
 ```python
 
 #using the in-built function str()
@@ -198,7 +199,9 @@ num= str(num)
 print(num)
 print(type(num))
 ```
-> How about converting str to int?
+
+How about converting str to int?
+
 ```python
 letter = 'A'
 letter = int(letter) 
@@ -211,6 +214,7 @@ print(type(letter1))
 ## Operators 
 
 **Arithmetic Operators:**
+
 ```python
 x = 15
 y = 4
@@ -277,8 +281,8 @@ print('not x is',not x)
 
 In normal mathematics expressions:
 
-    var = 0
-    var = var +1   would mean 0 = 1
+var = 0
+var = var +1   would mean 0 = 1
 
 But in python, the same expression has a different meaning .
 It means that the value of var is incremented by one and then assigned back to var. 
@@ -291,11 +295,11 @@ A string is a series of characters. Anything inside quotes is considered
 a string in Python, and you can use single or double quotes around your
 strings :
 
-    I told my friend, "Python is my favorite language!"'
-    
-    "The language 'Python' is named after Monty Python, not the snake."
-    
-    "One of Python's strengths is its diverse and supportive community."
+I told my friend, "Python is my favorite language!"'
+
+"The language 'Python' is named after Monty Python, not the snake."
+
+"One of Python's strengths is its diverse and supportive community."
 
 
 
@@ -310,6 +314,7 @@ Strings are a sequence, which means Python can use indexes to call parts of the 
 In Python, we use brackets [] after an object to call its index. We should also note that indexing starts at 0 for Python. Let's create a new object called s and then walk through a few examples of indexing.
 
 Syntax for []: Starting Index (Inclusive), End Index (Exclusive), Step Size
+
 ```python
 
 # Outputs the first letter. Remember: In Python, index starts from '0'
@@ -324,11 +329,10 @@ print(my_var[0:4:2])
 # Reversing a string
 print(my_var[::-1])
 ```
+**Practice 1**
+Print 'I Love Coding' from the string below
+s = "3DC'20 - I Love Coding!"
 
-!!! note  "Practice 1"
-        Print 'I Love Coding' from the string below
-        s = "3DC'20 - I Love Coding!"
-       
 
 
 ### Strings are immutable
@@ -353,36 +357,37 @@ s = s + " concatenate me"
 print(s)
 ```
 
-!!! note "How does the multiplication operator behave with strings ?" 
-          ```python
-          length = "z"
-          print(length *3)
-          ```
+"How does the multiplication operator behave with strings ?" 
+```python
+length = "z"
+print(length *3)
+```
           
-!!! note "Practice 2"
-          Suppose you had a person's name in a variable:
+**Practice 2**
+Suppose you had a person's name in a variable:
 
-          myName = "Kenny Carney"
+myName = "Kenny Carney"
 
-          However, you want the surname Carney first and then the first name of Kenny. Use slicing to print out Carney Kenny.
+However, you want the surname Carney first and then the first name of Kenny. Use slicing to print out Carney Kenny.
 
-          Remember: you can use the plus symbol and spaces to concatenate:  print(surname + " " + firstName)
+Remember: you can use the plus symbol and spaces to concatenate:  print(surname + " " + firstName)
 
-!!! note "Advanced Practice : Palindromes"
-          Given a string, write a code to check if it is palindrome or not.
-          A string is said to be palindrome if the reverse of the string is the same as string.
-          For example, “radar” is a palindrome, but “radix” is not a palindrome.
+**Advanced Practice : Palindromes**
+Given a string, write a code to check if it is palindrome or not.
+A string is said to be palindrome if the reverse of the string is the same as string.
+For example, “radar” is a palindrome, but “radix” is not a palindrome.
 
 ## Introduction to Lists
 
 A list is a collection of items in a particular order.
 
 In Python, square brackets ([ ]) indicate a list, and individual elements in the list are separated by commas
+
 ```python
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 print(bicycles)
 ```
-### Accessing Elements in a List
+### Accessing Elements
 
 Lists are ordered collections, so you can access any element in a list by telling Python the position, or index, of the item desired
 
@@ -392,7 +397,8 @@ Lists are ordered collections, so you can access any element in a list by tellin
 ```python
 print(bicycles[0])
 ``` 
-### To access elements from the back of a list, use a negative index.
+
+To access elements from the back of a list, use a negative index.
 
 An index of -1 would access the last element, -2 would access the second last element and so on. 
 ```python
@@ -430,18 +436,19 @@ print(len(a), len(b))
 ```
 Using **range()**
 
-> range() function is used to produce numbers using a start, stop, step 
+range() function is used to produce numbers using a start, stop, step 
 
-    range(2,10,1) will produce numbers starting from 2, incrementing by 2, till it becomes 10. 
-    
-    Note that it DOES NOT include 10 
+range(2,10,1) will produce numbers starting from 2, incrementing by 2, till it becomes 10. 
+
+Note that it DOES NOT include 10 
 
 
-> As the ```range()``` function is not a list, you need to pass it to the ```list()``` function to create a list. 
-      ```python
-       ls = list( range(10))
-       print(ls)
-       ```
+As the ```range()``` function is not a list, you need to pass it to the ```list()``` function to create a list. 
+
+```python
+ ls = list( range(10))
+ print(ls)
+ ```
 
 ### **Methods** of Lists
 
@@ -453,38 +460,38 @@ These are called **methods**. You access methods using the dot operator.
  
 Note: **All of the below functions are applied directly to the original list**
 
-* append() : add elements to the back of a list.
+- append() : add elements to the back of a list.
 
-        ```python
-        a = [1, 1.0, 'python', True] 
-        a.append( 'five')
-        print(a)
-        ```
+```python
+a = [1, 1.0, 'python', True] 
+a.append( 'five')
+print(a)
+```
         
-* pop() : Removes the last element from the list.
-        ```python
-        # Remove the last element from the list
-        ls = [1,2,3,4,5,"This will be removed from the list"]
-        print(ls)
-        ls.pop() # Note that .pop() is applied directly to the list I.e. There is no need to do ls = ls.pop()
-        print(ls)
-        ```
+- pop() : Removes the last element from the list.
+```python
+# Remove the last element from the list
+ls = [1,2,3,4,5,"This will be removed from the list"]
+print(ls)
+ls.pop() # Note that .pop() is applied directly to the list I.e. There is no need to do ls = ls.pop()
+print(ls)
+```
 
-* reverse() : Reverses the order of all elements in the list.
-        ```python
-        # Reverses the order of the list
-        ls.reverse()
-        print(ls)
-        ```
+- reverse() : Reverses the order of all elements in the list.
+```python
+# Reverses the order of the list
+ls.reverse()
+print(ls)
+```
 
 ### List Slicing
 
 The **in** Keyword
-        ```python
-        a = ['horse', 'cat', 'dog', 'chicken', 'rat','duck', 'pigeon']
-        print('cat' in a)
-        print('donkey' in a)
-         ```
+```python
+a = ['horse', 'cat', 'dog', 'chicken', 'rat','duck', 'pigeon']
+print('cat' in a)
+print('donkey' in a)
+ ```
 
 The "+", " * " and "=="  operators with lists 
 
@@ -492,30 +499,30 @@ Recall that the "+" operator behaves differently with two numbers compared to tw
 
 The "+"and " * "  operators behave differently with lists, compared to the numeric datatypes. 
 
-* The "+" operator performs concatenation when both its operands are lists. 
+- The "+" operator performs concatenation when both its operands are lists. 
   ```python
-          a = [1, 2, 3]
-          b = [7, 8, 9]
-          c = a + b
-          print(c)
-          ```
+  a = [1, 2, 3]
+  b = [7, 8, 9]
+  c = a + b
+  print(c)
+  ```
 
-* The " * " operator works with a list and an integer. 
-         ```python
-        a = [1, 2, 3]
-        c = a*3
-        print(c)
-        ```
+- The " * " operator works with a list and an integer. 
+```python
+a = [1, 2, 3]
+c = a*3
+print(c)
+```
 
-* The " == " operator checks the equality of two lists. This includes the length and all the elements in the list
-        ```python
-        
-        a = [1, 2, 3]
-        b = [3, 1, 2]
-        c = [1, 2, 3]
-        print(a == b)
-        print(a == c)
-        ```
+- The " == " operator checks the equality of two lists. This includes the length and all the elements in the list
+```python
+
+a = [1, 2, 3]
+b = [3, 1, 2]
+c = [1, 2, 3]
+print(a == b)
+print(a == c)
+```
 
 ### Copying a list
 
@@ -542,7 +549,8 @@ b[2] = 5
 print(a)
 print(b)
 ```
-### The ```is``` operator checks for aliasing
+
+### The ```is``` operator 
 
 The ```is``` operator checks if aliasing is happening. 
 ```python
@@ -561,22 +569,22 @@ print(a is b)
 print(a == b)
 ```
 
-!!! note "**Practice 3**" 
-  ```python
-  #1. What will the below code produce?
+**Practice 3**
+```python
+#1. What will the below code produce?
 
-  x = [0,1,2,3,4,5]
-  x == x[:3] + x[3:]
-  ```
+x = [0,1,2,3,4,5]
+x == x[:3] + x[3:]
+```
 
-!!! note "**Practice 4**" 
-      Given a list, write a code that swaps the list elements at indices index1 and index2.
+**Practice 4**
+  Given a list, write a code that swaps the list elements at indices index1 and index2.
 
-      It does not modify the original list, but returns a new list.
+  It does not modify the original list, but returns a new list.
 
-      Important note : Do keep in mind that the indices given could be *negative* as well
+  Important note : Do keep in mind that the indices given could be *negative* as well
 
-      I have started the code for you 
+  I have started the code for you 
 ```python
       ls = [3, 6, 8, 2]
       index1 = int(input(" Enter index 1 value :"))
@@ -622,11 +630,11 @@ print(my_dict)
 d = {'k1': [1,2,{'k2':[["Hello!"]]}]}
 d['k1'][2]['k2'][0][0]
 ```
-!!!note "Practice "
-        Retrieve 'Coding is fun unless you're doing it wrong'
-        ```python
-        d = {'k1':[1,2,{'k2':['pls do not do this',{'have fun':[1,2,['Coding is fun unless you\'re doing it wrong', 1, 2]]}]}]}
-        ```
+**Practice**
+Retrieve 'Coding is fun unless you're doing it wrong'
+```python
+d = {'k1':[1,2,{'k2':['pls do not do this',{'have fun':[1,2,['Coding is fun unless you\'re doing it wrong', 1, 2]]}]}]}
+```
 
 ## Tuples
 
@@ -754,9 +762,9 @@ while index < 5:
   index += 1
 print(index)
 ```
-!!! note "Practice"
-              one of the important application of while loop is to validate input from user
-              prompt the user to input their gender and if its not M or F you will notify them that its wrong input and ask them to input again
+**Practice**
+one of the important application of while loop is to validate input from user
+prompt the user to input their gender and if its not M or F you will notify them that its wrong input and ask them to input again
               
               
 ## Some more hands-on to end!
@@ -768,7 +776,7 @@ print(index)
             ****
             *****
              
- 2. Factorial of a number n is represented by n! and is equal to 1 * 2 * 3 * .... * (n-1) * n
+2. Factorial of a number n is represented by n! and is equal to 1 * 2 * 3 * .... * (n-1) * n
     5! = 5 * 4 * 3 * 2 * 1 = 120
     Write a program to calculate the factorial of a number given by the user
     
