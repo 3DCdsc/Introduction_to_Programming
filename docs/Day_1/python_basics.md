@@ -80,12 +80,11 @@ Variables are often described as boxes you can store values in.
 This idea can be helpful the first few times you use a variable, but it’s much better to think of variables as labels that you can assign to values. 
 You can also say that a variable references a certain value.
 
-!!!note "Data type"
-          an attribute of data which tells the compiler or interpreter how the programmer intends to use the data
+**Data type**  is an attribute of data which tells the compiler or interpreter how the programmer intends to use the data.
           
-          A variable can be assigned to different types of values. 
+A variable can be assigned to different types of values. 
 
-What are the basic data types?
+
 
 Some basic data types in Python are:
 
@@ -366,7 +365,7 @@ length = "z"
 print(length *3)
 ```
           
-**Practice 2: **
+**Practice 2:**
 
 Suppose you had a person's name in a variable:
 
@@ -637,7 +636,7 @@ print(my_dict)
 d = {'k1': [1,2,{'k2':[["Hello!"]]}]}
 d['k1'][2]['k2'][0][0]
 ```
-**Practice**
+**Practice 5:**
 
 Retrieve 'Coding is fun unless you're doing it wrong'
 ```python
@@ -772,7 +771,7 @@ while index < 5:
   index += 1
 print(index)
 ```
-**Practice**
+**Practice 7:**
 one of the important application of while loop is to validate input from user
 prompt the user to input their gender and if its not M or F you will notify them that its wrong input and ask them to input again
               
