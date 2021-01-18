@@ -758,7 +758,22 @@ print(index)
               one of the important application of while loop is to validate input from user
               prompt the user to input their gender and if its not M or F you will notify them that its wrong input and ask them to input again
               
+              
+## Some more hands-on to end!
 
+1. Write a function to print the following pattern using for/ while loops : 
+            *
+            **
+            ***
+            ****
+            *****
+             
+ 2. Factorial of a number n is represented by n! and is equal to 1 * 2 * 3 * .... * (n-1) * n
+    5! = 5 * 4 * 3 * 2 * 1 = 120
+    Write a program to calculate the factorial of a number given by the user
+    
+            
+  
     
 
 

@@ -1,6 +1,5 @@
-## Python
+# Install Python on Windows
 
-### Windows
 Use the following link to download and follow the on screen instructions.
 
 <a href="https://www.python.org/downloads/" target="_blank">Link to Download python for windows</a>
