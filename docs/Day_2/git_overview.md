@@ -2,7 +2,7 @@
 
 You may use this youtube playlist to accompany the lecture notes:
 
-<a href="https://www.youtube.com/playlist?list=PL_D88w5Aragp5062QqlgDrUkDl2-kgv79" target="_blank">Link to 
+<a src="https://www.youtube.com/playlist?list=PL_D88w5Aragp5062QqlgDrUkDl2-kgv79" target="_blank">Link to 
 Youtube Playlist</a>
 
 Lecture Notes:
