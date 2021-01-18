@@ -6,7 +6,7 @@ Git works locally on our computer, but what if we want to collaborate with other
 
 To link a git folder to a remote git repository, we use `git remote add <name of remote> <url link of remote git repo>`. This can be seen as syncing your git folder with a remote computer that contains the same git repo.
 
-## push / pull / fetch
+## Push / Pull / Fetch
 
 In order to send updates to the remote repo, we use 
 `git push <remote repo name> <branch name>`
@@ -21,8 +21,7 @@ The differences between `git pull` and `git fetch`, is that `git pull` automatic
 
 Therefore `git pull` actually calls `git fetch` and `git merge FETCH_HEAD` automatically.
 
-<a name="github/clone"></a>
-### clone
+## Clone
 
 To download repositories on github as a git repo, we use `git clone <repo url>`.
 A url can be accessed as follows:
