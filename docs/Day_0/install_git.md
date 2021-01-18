@@ -49,6 +49,8 @@ Just letting `Git` know who you are. If you already have a `GitHub` account, kee
 
 ```
 git config --global user.name
+```
+```
 git config --global user.email
 
 ```
@@ -59,6 +61,8 @@ git config --global user.email
 
 ```
 git config --global user.name "Tom Cruise"
+```
+```
 git config --global user.email "tom@example.com"
 
 ```
