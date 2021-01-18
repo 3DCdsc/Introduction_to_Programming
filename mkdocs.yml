@@ -87,6 +87,7 @@ nav:
       - Day 2:
           - Git:
             - Overview: "Day_2/git_overview.md"
+            - Data Model: "Day_2/git_data_model.md"
             - Key Concepts (Local): "Day_2/git_local_concepts.md"
             - Key Concepts (Remote): "Day_2/git_remote_concepts.md"
             - Example: "Day_2/git_example.md"
