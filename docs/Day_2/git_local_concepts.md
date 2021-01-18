@@ -103,27 +103,6 @@ You will see weird seperators on the merge conflict. The following image explain
     <img src="../imgs/git/mergeConflictExpl.png" width="500"/>
 </figure>
 
-
-## gitignore
-If we have files that we want git to always ignore and not track them, we use a `.gitignore` file to list down specific files.
-
-!!! info "Why does the file name have a dot infront?"
-    File with a `.` infront are called `dotfiles`. They are hidden files are hidden from the OS and even the `ls` command doesn't show it. In fact, we need to use `ls -a` in which the `-a` flag tells the command to include hidden files or "all" files.
-
-    dotfiles are generally used for config files such as gitignore in this case.
-
-`.gitignore` uses a globbing patterns to match file names.
-
-Commonly used pattern are such as:
-
-- `**/folderName` : every file that have a parent directory named `folderName` such as folderName/apiKeys , secret/folderName/apiKeys
-- `*.log` : Any file that has `.log` in it such as apiKeys.log
-
-!!! note ""
-    No need to memorise such patterns. Google is always your bestfriend.
-
-<a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore#git-ignore-patterns" target="_blank">Link to more information on gitignore patterns</a>
-
 ## git utilities
 Some useful git commands as listed:
 
