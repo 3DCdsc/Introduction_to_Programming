@@ -17,9 +17,10 @@ In order to get updates from the remote repo, we use
 Another way of getting updates from the remote repo, we also can use 
 `git fetch <remote repo name> <branch name>`
 
-The differences between `git pull` and `git fetch`, is that `git pull` automatically merges the changes into your local directory while `git fetch` gets all the changes and stores in in another commit in a branch named `FETCH_HEAD ` in which you can later combine using `git merge FETCH_HEAD`. 
+!!! info "git pull vs git fetch"
+    The differences between `git pull` and `git fetch`, is that `git pull` automatically merges the changes into your local directory while `git fetch` gets all the changes and stores in in another commit in a branch named `FETCH_HEAD ` in which you can later combine using `git merge FETCH_HEAD`. 
 
-Therefore `git pull` actually calls `git fetch` and `git merge FETCH_HEAD` automatically.
+    Therefore `git pull` actually calls `git fetch` and `git merge FETCH_HEAD` automatically.
 
 ## Clone
 
