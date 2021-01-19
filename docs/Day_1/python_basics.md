@@ -555,6 +555,16 @@ print(a)
 print(b)
 ```
 
+A **list slice** creates a copy of a list. 
+
+List slicing can be used to create a copy of a list 
+```python
+a = [1,2,3]
+b = a[:]
+print(a is b)
+print(a == b)
+```
+
 ### The ```is``` operator 
 
 The ```is``` operator checks if aliasing is happening. 
@@ -564,15 +574,7 @@ b = a
 print(a is b)
 ```
 
-### A list slice creates a copy of a list. 
 
-List slicing can be used to create a copy of a list 
-```python
-a = [1,2,3]
-b = a[:]
-print(a is b)
-print(a == b)
-```
 
 **Practice 3**
 ```python
