@@ -5,6 +5,7 @@
 
 - What is Coding? Why Python?
 - Variables and simple data types
+- Intro to Functions
 - Operators
 - Strings
 - Introduction to Lists
@@ -141,25 +142,105 @@ than length_of_persons_name.
    my var = 10 (Using spaces)
 
    my_var* = 10 (Using special symbols)
+   
+## Functions
+
+### Why do we need them?
+
+Functions are a piece of code designed to do a certain task. 
+
+Functions can be in-built or user-defined
 
 
-## Some in-built functions
-**print()** : the print() function is an in-built function of Python which is used to print the specified message to the screen or other standard output device.
+Consider the statement  :
 
 ```python
-print("Hello, World!")
+print("Hello World!")
+
+print() is an in-built function of Python. It prints the specified message to the screen.
+
+But what if we want to print a statement at different parts of the program?
+
+Or let's say, you want to do the same task,( such as finding the average of given numbers, or printing out names ) again and again, at different times?
+
+Would you write that piece of code again ?
+
+Here's why we need functions.
+
+When you DEFINE a function, you can use the same code more than once, from any part of the program by CALLING it.
+Let's see how to do that!
+
 ```
 
-let's assign a variable and print it!
+### Defining a function
+```python
+def task_print():   #def is a keyword used for defining a function
+  print("Hello")     # use indentations after the first staement to create the body
+
+```
+### Calling a Function
+
+Defining the function means simply writing some code. Running it will not give you anything since you are not **using it**. 
+
+So you need to call the function to execute its body:
+```python
+task_print()  # simply the function name with the brackets. Now try running it!
+```
+
+What are the brackets for?
+
+A function often receives certain arguments which are used in the function body. 
+
+For example, if you want to print a name on the screen but the name is to be given by the user, you can pass the name as an ARGUMENT to the function
 
 ```python
-message = 2
-print(message) # this prints the value stored in the variable message 
+def task_2 (name):  # function definition
+  print(name)
 
-#you can print more than one variable at a time by:
-second_message = 1
-print(message, second_message) 
+task_2("Zac")    # function Call
+task_2("I can change the name !")
+task_2("Emily")
+
 ```
+in the above example, "Zac" is an argument which is used in the CALL statement. 
+
+This argument gets passed to the function definition. Thus ```name``` is an argument that now has the value Zac.
+
+### Return Statement
+
+We just saw how functions can receive arguments and work upon them. 
+What if we want to extract some value from the function, i.e. , we want the function to RETURN something?
+
+```return``` statement is used in the function body to return a value ( or values) back to the function call . 
+
+```python
+def add_numbers(num1, num2) :   
+  total = num1 + num2
+  return(total)
+
+num1 = 2
+num2 = 4
+addition_product = add_numbers(num1, num2)  #the value returned by the function is now assigned to the variable "addition product"
+print(addition_product)
+```
+
+Do NOTE that functions don't necessarily have to return a value:
+```python
+def add_numbers(num1, num2) :   
+  total = num1 + num2
+  print(total)         
+
+num1 = 2
+num2 = 4
+addition_product = add_numbers(num1, num2)  #the value returned by the function is now assigned to the variable "addition product"
+print(addition_product)
+```
+In the above function, there is no return statement. Thus the ```None``` value of ```addition_product```
+
+### Other in-built functions 
+ 
+You have learnt to define and call your own function. Let's see some more in-built functions of Python 
+
 What if you want to know what data type is the variable?
 
 **type()** : this in-built function is used to determine the data type of the variable
@@ -167,7 +248,6 @@ What if you want to know what data type is the variable?
 print(type(message))
 type(2) 
 ```
- 
 Suppose you don't know what value should be assigned to your variable and want to ask the user for the value. you can do this using **input()**
 
 **input()** method reads a line from input, converts into a string and returns it.
@@ -179,19 +259,17 @@ print("You entered: " , message)
 #Suppose you want to print a message to the user for asking the value
 second_message = input("Please enter a number")
 print(second_message)
+
 ```
 
-
-
-## Converting data types
+### Converting data types
 
 Data types can be converted from one form to another using in-built functions like int(), str(), float().
+
 However, do note that **not** every conversion is possible!
 
 Can you convert an int type to a string type? 
-
 ```python
-
 #using the in-built function str()
 num = 1
 num= str(num)
@@ -210,6 +288,7 @@ letter1 = '3'
 letter1 = int(letter1)
 print(type(letter1))
 ```
+
 
 ## Operators 
 
@@ -584,20 +663,6 @@ x = [0,1,2,3,4,5]
 x == x[:3] + x[3:]
 ```
 
-**Practice 4**
-
-Given a list, write a code that swaps the list elements at indices index1 and index2.
-
-It does not modify the original list, but returns a new list.
-
-Important note : Do keep in mind that the indices given could be *negative* as well
-
-I have started the code for you 
-```python
-      ls = [3, 6, 8, 2]
-      index1 = int(input(" Enter index 1 value :"))
-      index2 = int(input(" Enter index 2 value:")) 
-```
 
 ## Dictionaries
 
@@ -638,7 +703,7 @@ print(my_dict)
 d = {'k1': [1,2,{'k2':[["Hello!"]]}]}
 d['k1'][2]['k2'][0][0]
 ```
-**Practice 5:**
+**Practice 4:**
 
 Retrieve 'Coding is fun unless you're doing it wrong'
 ```python
@@ -773,12 +838,13 @@ while index < 5:
   index += 1
 print(index)
 ```
-**Practice 7:**
+**Practice 6:**
 one of the important application of while loop is to validate input from user
+
 prompt the user to input their gender and if its not M or F you will notify them that its wrong input and ask them to input again
               
               
-## Some more hands-on to end!
+## Optional Practice Questions!
 
 1. Write a function to print the following pattern using for/ while loops : 
             *
