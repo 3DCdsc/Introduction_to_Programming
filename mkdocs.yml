@@ -91,6 +91,7 @@ nav:
             - Key Concepts (Local): "Day_2/git_local_concepts.md"
             - Key Concepts (Remote): "Day_2/git_remote_concepts.md"
             - Example: "Day_2/git_example.md"
+            - Python OOP: "Day_2/python oop.md"
       - Day 3:
           - Web Basics: "Day_3/web_basics.md"
       - Day 4:
