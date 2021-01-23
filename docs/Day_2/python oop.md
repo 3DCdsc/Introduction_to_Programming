@@ -665,4 +665,35 @@ print(A.name+"'s age: "+str(A.age))
 A.display_information()
 ```
 
-## 3.2 Excersise:
+### 3.2 Excersise: Given a class Element, Write a subclass metal with the given properties:
+
+An element object has the following properties:
+1. Name
+2. Symbol
+3. Mass Number (A)
+4. Atomic Number (Z)
+5. Valency
+
+Write a class for a metal object that has the above properties, and the additional properties listed below:
+
+1. Heat Capacity
+2. Electrical Conductivity
+3. Type of Structure of atoms
+4. Can it be used as a semiconductor?
+
+```py
+class Element:
+    def __init__(self, name, symbol, A, Z, valency):
+        self.name = name
+        self.symbol = symbol
+        self.A = A
+        self.Z = Z
+        self.valency = valency
+
+    def display_information(self):
+        print("The element is        :"+self.name)
+        print("The symbol is         :"+self.symbol)
+        print("The Mass Number is    :"+self.A)
+        print("The Atomic Number is  :"+self.Z)
+        print("The valency is        :"+self.valency)
+```
