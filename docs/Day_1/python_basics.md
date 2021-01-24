@@ -156,21 +156,19 @@ Consider the statement  :
 
 ```python
 print("Hello World!")
-
+```
 print() is an in-built function of Python. It prints the specified message to the screen.
 
 But what if we want to print a statement at different parts of the program?
 
-Or let's say, you want to do the same task,( such as finding the average of given numbers, or printing out names ) again and again, at different times?
-
-Would you write that piece of code again ?
+Or let's say, you want to do the same task,( such as finding the average of given numbers, or printing out names ) again and again, at different times? Would you write that piece of code again ?
 
 Here's why we need functions.
 
 When you DEFINE a function, you can use the same code more than once, from any part of the program by CALLING it.
 Let's see how to do that!
 
-```
+
 
 ### Defining a function
 ```python
@@ -411,7 +409,8 @@ print(my_var[::-1])
 ```
 **Practice 1 :**
 
-Print 'I Love Coding' from the string below
+Print 'I Love Coding' from the string below:
+
 s = "3DC'20 - I Love Coding!"
 
 
@@ -554,6 +553,7 @@ print(a)
 ```
         
 - pop() : Removes the last element from the list.
+
 ```python
 # Remove the last element from the list
 ls = [1,2,3,4,5,"This will be removed from the list"]
@@ -570,6 +570,20 @@ print(ls)
 ```
 
 ### List Slicing
+
+In the following example, a list assigned to ```b``` is created by extracting element with index ```2```, **up to but not including** element index ```4```. The default increment is 1. 
+
+```python 
+a = ['horse', 'cat', 'dog', 'chicken', 'rat','duck', 'pigeon']
+b = a[2:4]
+```
+
+In the following example, a list assigned to ```b``` is created by extracting element with index ```1```, **up to and including the last element**, in increments of ```2```.
+
+```python 
+a = ['horse', 'cat', 'dog', 'chicken', 'rat','duck', 'pigeon']
+b = a[1::2]
+```
 
 The **in** Keyword
 ```python
@@ -773,6 +787,7 @@ for car in cars:
     print(car.title())
 
 ```
+
 ```python
 car ='bmw'
 car =='bmw'  # What is the difference between the two operators?
@@ -815,6 +830,22 @@ Here's the general format for a  ```for``` loop in Python:
 ```python
     for item in object:
         statements to do stuff
+```
+
+### Iterating through a list
+
+```python
+list1 = [1,2,3,4,5,6,7,8,9,10]
+# Note: The list can also be created via range()
+list2 = list(range(1,11))
+
+for el in list1:
+    print(i)
+
+
+# This is the same as the following:
+for el in range(1,11):
+    print(i)
 ```
 
 ## while loop
