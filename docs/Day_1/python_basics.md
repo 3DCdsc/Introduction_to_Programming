@@ -873,7 +873,40 @@ print(index)
 one of the important application of while loop is to validate input from user
 
 prompt the user to input their gender and if its not M or F you will notify them that its wrong input and ask them to input again
-              
+
+## HANDS-ON
+
+Now that we have learnt the fundamentals of python programming, let's built something of our own that's useful!
+
+### NRIC validator
+
+Do you know how to verify an NRIC number? Here are some guidelines:
+The steps involved in the computation are as follows:
+
+
+1) Multiply each digit in the NRIC number by its weight i.e. 2 7 6 5 4 3 2 in order.
+
+2) Add together the above products.
+
+3) If the first letter i.e. UIN of the NRIC starts with T or G, add 4 to the total.
+
+4) Find the remainder of (sum calculated above) mod 11. (total %11)
+
+5) Compare the digit you get from last step to the following list: 
+    If the NRIC starts with F or G: 0=X, 1=W, 2=U, 3=T, 4=R, 5=Q, 6=P, 7=N, 8=M,  9=L, 10=K. 
+    If the NRIC starts with S or T: 0=J, 1=Z, 2=I, 3=H, 4=G, 5=F, 6=E, 7=D, 8=C, 9=B, 10=A
+
+  After matching to the list, the letter that you get should be the last letter of the nric code ! And thus the nric number is verified!
+
+
+
+How to go about it? 
+
+Do you need functions?
+
+Which data type(complex) would you use for assigning the alphabets to digits in step 5 ?
+
+            
               
 ## Optional Practice Questions!
 
