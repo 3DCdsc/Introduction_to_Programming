@@ -183,6 +183,8 @@ print(simple_interest(15, principle = 1000, time = 5))
 
 Note1: Keyword arguments are always passed to the function after positional arguments!
 
+Thus, `simple_interest(15, time = 5, 1000)` isn't allowed, but `simple_interest(15, 5, principle = 1000)` is
+
 Note2: An argument cannot be called as both a positonal and a keyword argument IN THE SAME function call! `simple_interest(15, 5, rate = 15)` would not be valid since it calls rate as both a positional and a keyword argument
 
 1.3.5. Arbitrary Arguments(*args): When an unknown or "arbitrary" number of arguments are passed to a function, they are known as Arbitrary arguments
