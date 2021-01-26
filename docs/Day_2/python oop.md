@@ -30,7 +30,7 @@ def max_value(list_of_numbers):
 
 # the word 'def' is short for define. It means you are defining a function called 'max_value'
 
-# In programming, it is a convention to write function names in 'snake case'
+# In python, it is a convention to write function names in 'snake case'
 # snake case means that the each word is in lower case, and separated by underscores.
 # Example: this_is_snake_case
 
