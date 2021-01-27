@@ -248,7 +248,21 @@ print(add_multiply(5, 6, 2, 4, 2, 3, 5, multiply = 2))
 # prints 54
 ``` 
 
-### 1.4 _What is recursion, and why do we need it?_
+### 1.4 _Type Hints_
+
+When writing functions with a lot of parameters and variable names that might be unintuitive, it is a good idea to use type hints! type hints allow the person writing the function to tell the user what the expected data types of all the arguments being passed into it are
+
+For example:
+
+```py
+# this tells the user than height is a float, weight is an int and that this function is meant to return a float as well
+def calculateBMI(height: float, weight: int) -> float:
+    return weight/((height/100)**2)
+
+print(calculateBMI(182, 80))
+```
+
+### 1.5 _What is recursion, and why do we need it?_
 
 Lets take the factorial from the previous excersie as an example.
 
@@ -297,7 +311,7 @@ def factorial(number):
     return number*factorial(number-1)
 ```
 
-### 1.5 _Excersise: What does this piece of code output?_
+### 1.6 _Excersise: What does this piece of code output?_
 
 ```py
 def function(number):
@@ -375,6 +389,12 @@ class Pen:
     # wouldn't you want a way to see the properties of a pen you made as well?
     # you can write functions in a class that can work with the instances of the class. These functions are known as 'member
     # functions' of the class or 'methods'.
+
+    # methods are always functions that work on objects of a specific class. A method cannot be used without an object
+
+    # All methods of a class are unique to that class, and cannot be used on objects from other classes!
+    # for example, you could have a method called read() that reads the contents of a text book but you
+    # cannot use that method on a pen, because it doesn't make sense to read a pen!
     def display_information(pen):
         print("Colour : " + pen.colour)
         print("Size   : " + str(pen.size))
@@ -667,35 +687,47 @@ print(A.name+"'s age: "+str(A.age))
 A.display_information()
 ```
 
-### 3.2 Excersise: Given a class Element, Write a subclass metal with the given properties:
+### 3.2 Excersise: Given a class computer, Write a subclass laptop and desktop with the given additional properties:
 
-An element object has the following properties:
-1. Name
-2. Symbol
-3. Mass Number (A)
-4. Atomic Number (Z)
-5. Valency
+A computer object has the following properties:
 
-Write a class for a metal object that has the above properties, and the additional properties listed below:
+1. CPU Type
+2. Storage Type
+3. Storage Quantity (in GB)
+4. RAM (in GB)
+5. GPU Type
 
-1. Heat Capacity
-2. Electrical Conductivity
-3. Type of Structure of atoms
-4. Can it be used as a semiconductor?
+Write a class for laptop and desktop objecta that have the above properties, and the additional properties listed below:
+
+Desktop:
+
+1. Monitor
+2. Monitor Resolution
+2. Keyboard
+3. Mouse
+
+Laptop:
+
+1. Monitor Resolution
+2. is it a touchscreen?
+
+Also write a function that displays all this information
 
 ```py
-class Element:
-    def __init__(self, name, symbol, A, Z, valency):
-        self.name = name
-        self.symbol = symbol
-        self.A = A
-        self.Z = Z
-        self.valency = valency
+class Computer:
+    def __init__(self, cpu: str, storage_type: str, storage: float, ram: float, gpu: str):
+
+        # type hints can also be given to a class' data members
+        self.cpu: str = cpu
+        self.storage_type: str = storage_type
+        self.storage: float = storage
+        self.ram: float = ram
+        self.gpu: str = gpu
 
     def display_information(self):
-        print("The element is        :"+self.name)
-        print("The symbol is         :"+self.symbol)
-        print("The Mass Number is    :"+self.A)
-        print("The Atomic Number is  :"+self.Z)
-        print("The valency is        :"+self.valency)
+        print("The CPU type is     : "+self.cpu)
+        print("The Storage type is : "+self.storage_type)
+        print("The Stroage is      : "+str(self.storage))
+        print("The RAM is          : "+str(self.ram))
+        print("The GPU is          : "+self.gpu)
 ```
