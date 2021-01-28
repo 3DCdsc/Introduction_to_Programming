@@ -58,6 +58,11 @@ Commonly used pattern are such as:
 
 <a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore#git-ignore-patterns" target="_blank">Link to more information on gitignore patterns</a>
 
+<a href="https://www.gitignore.io" target="_blank">gitignore templates</a>
+
+
+
+
 ## Licenses
 Once your work is made public, it must have a license as all creative work are eligible for intellectual property and copyright protection. A license.txt file in the base directory tells people how and what they are able to do with your work.
 
