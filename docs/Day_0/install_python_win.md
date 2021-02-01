@@ -15,6 +15,10 @@ Open `terminal for macOS` or `windows prompt for Windows` and run the following 
 `pip install requests`
 #### beautifulsoup
 `pip install beautifulsoup4`
+#### Flask
+`pip install flask`
+#### pyrebase
+`pip install pyrebase`
 
 !!! note "What's going on?"
     We are now installing packages using `pip` which is the Python Package Manager.
