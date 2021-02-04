@@ -63,7 +63,7 @@ By the end of this workshop series, you should be capable of building and deploy
 -	Introduction to Json
 -	Introduction to Firebase
 
-## Day 5: Build and Deploy your Web App  
+## Day 5: Introduction to Linux & Shell
 
 !!! info ""
     - Date: **09 Feb 2021 (Tuesday)**
@@ -71,6 +71,7 @@ By the end of this workshop series, you should be capable of building and deploy
     - Venue: SUTD i3 Lab (1.605)
     - Online Venue: [Twitch](https://www.twitch.tv/3dcdsc)
 
--	Introduction to Flask App Deployment 
--	Hands-on: Build your own Flask App
--	Hands-on: Deploy your Flask App
+-   Introduction Linux
+-   Introduction to UNIX Shell
+-   Introduction to SSH
+-   Introduction to Dotfiles Management

@@ -74,7 +74,6 @@ extra:
 # Navigation Menu
 nav:
   - Overview: "index.md"
-  # - Demo: "demo.md"
   - Workshop Materials:
       - Day 0:
           - Setup Environment: "Day_0/setup_guides.md"
@@ -96,3 +95,5 @@ nav:
           - Web Basics: "Day_3/web_basics.md"
       - Day 4:
           - Server Basics: "Day_4/server_basics.md"
+      - Day 5:
+          - Intro to Linux: "Day_5/intro_to_linux.md"
