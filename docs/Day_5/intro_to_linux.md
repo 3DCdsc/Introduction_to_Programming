@@ -15,7 +15,7 @@
 ---
 
 <figure>
-  <img src="imgs/shell.png"/>
+  <img src="../imgs/shell.png"/>
   <figcaption>UNIX Shell</figcaption>
 </figure>
 
