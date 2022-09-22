@@ -1,0 +1,2300 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://3dc.opensutd.org/Introduction_to_Programming/Day_1/python_basics/">
+      
+      <link rel="icon" href="../../imgs/code.svg">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>Python Basics - Introduction to Programming</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#day-1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Programming" class="md-header__button md-logo" aria-label="Introduction to Programming" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Programming
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python Basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/3DCdsc/Introduction_to_Programming" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Introduction_to_Programming
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Programming" class="md-nav__button md-logo" aria-label="Introduction to Programming" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+
+    </a>
+    Introduction to Programming
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/3DCdsc/Introduction_to_Programming" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Introduction_to_Programming
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Workshop Materials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Workshop Materials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workshop Materials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Day 0
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 0" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Day 0
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_0/setup_guides/" class="md-nav__link">
+        Setup Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_0/install_git/" class="md-nav__link">
+        Install Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_1_3" type="checkbox" id="__nav_2_1_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_3">
+          Install Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Install Python" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Install Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_0/install_python_mac/" class="md-nav__link">
+        on macOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_0/install_python_win/" class="md-nav__link">
+        on Windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Day 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Day 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python Basics
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-will-be-learning-today" class="md-nav__link">
+    What you will be learning today:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-coding" class="md-nav__link">
+    What is Coding?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-python" class="md-nav__link">
+    Why Python?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-assignment" class="md-nav__link">
+    Variable Assignment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-do-we-need-them" class="md-nav__link">
+    Why do we need them?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-function" class="md-nav__link">
+    Defining a function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calling-a-function" class="md-nav__link">
+    Calling a Function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-statement" class="md-nav__link">
+    Return Statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-in-built-functions" class="md-nav__link">
+    Other in-built functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-data-types" class="md-nav__link">
+    Converting data types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    Strings
+  </a>
+  
+    <nav class="md-nav" aria-label="Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-indexing-and-slicing" class="md-nav__link">
+    String indexing and slicing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strings-are-immutable" class="md-nav__link">
+    Strings are immutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-concatenation" class="md-nav__link">
+    String Concatenation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-lists" class="md-nav__link">
+    Introduction to Lists
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction to Lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-elements" class="md-nav__link">
+    Accessing Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists-are-mutable" class="md-nav__link">
+    Lists are mutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#len-function" class="md-nav__link">
+    len() function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-list" class="md-nav__link">
+    Creating a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-of-lists" class="md-nav__link">
+    Methods of Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-slicing" class="md-nav__link">
+    List Slicing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-a-list" class="md-nav__link">
+    Copying a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-is-operator" class="md-nav__link">
+    The is operator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionaries" class="md-nav__link">
+    Dictionaries
+  </a>
+  
+    <nav class="md-nav" aria-label="Dictionaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructing-a-dictionary" class="md-nav__link">
+    Constructing a dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-a-value" class="md-nav__link">
+    Accessing a value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionaries-are-mutable" class="md-nav__link">
+    Dictionaries are mutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-dictionaries" class="md-nav__link">
+    Nested Dictionaries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    Tuples
+  </a>
+  
+    <nav class="md-nav" aria-label="Tuples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructing-tuples" class="md-nav__link">
+    Constructing Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immutability" class="md-nav__link">
+    Immutability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets" class="md-nav__link">
+    Sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditionals-if-else-and-elif" class="md-nav__link">
+    Conditionals : if, else and elif
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-loop" class="md-nav__link">
+    for Loop
+  </a>
+  
+    <nav class="md-nav" aria-label="for Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterating-through-a-list" class="md-nav__link">
+    Iterating through a list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while-loop" class="md-nav__link">
+    while loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    HANDS-ON
+  </a>
+  
+    <nav class="md-nav" aria-label="HANDS-ON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nric-validator" class="md-nav__link">
+    NRIC validator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-practice-questions" class="md-nav__link">
+    Optional Practice Questions!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Day 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 2" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Day 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3_1" type="checkbox" id="__nav_2_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_1">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_2/git_overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_2/git_data_model/" class="md-nav__link">
+        Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_2/git_local_concepts/" class="md-nav__link">
+        Key Concepts (Local)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_2/git_remote_concepts/" class="md-nav__link">
+        Key Concepts (Remote)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_2/git_example/" class="md-nav__link">
+        Example
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_2/python%20oop/" class="md-nav__link">
+        Python OOP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          Day 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Day 3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_3/web_basics/" class="md-nav__link">
+        Web Basics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Day 4
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 4" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Day 4
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_4/server_basics/" class="md-nav__link">
+        Server Basics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          Day 5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 5" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Day 5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_5/intro_to_linux/" class="md-nav__link">
+        Intro to Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-will-be-learning-today" class="md-nav__link">
+    What you will be learning today:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-coding" class="md-nav__link">
+    What is Coding?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-python" class="md-nav__link">
+    Why Python?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-assignment" class="md-nav__link">
+    Variable Assignment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-do-we-need-them" class="md-nav__link">
+    Why do we need them?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defining-a-function" class="md-nav__link">
+    Defining a function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calling-a-function" class="md-nav__link">
+    Calling a Function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-statement" class="md-nav__link">
+    Return Statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-in-built-functions" class="md-nav__link">
+    Other in-built functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-data-types" class="md-nav__link">
+    Converting data types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    Strings
+  </a>
+  
+    <nav class="md-nav" aria-label="Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-indexing-and-slicing" class="md-nav__link">
+    String indexing and slicing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strings-are-immutable" class="md-nav__link">
+    Strings are immutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-concatenation" class="md-nav__link">
+    String Concatenation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-lists" class="md-nav__link">
+    Introduction to Lists
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction to Lists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-elements" class="md-nav__link">
+    Accessing Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists-are-mutable" class="md-nav__link">
+    Lists are mutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#len-function" class="md-nav__link">
+    len() function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-list" class="md-nav__link">
+    Creating a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-of-lists" class="md-nav__link">
+    Methods of Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-slicing" class="md-nav__link">
+    List Slicing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-a-list" class="md-nav__link">
+    Copying a list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-is-operator" class="md-nav__link">
+    The is operator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionaries" class="md-nav__link">
+    Dictionaries
+  </a>
+  
+    <nav class="md-nav" aria-label="Dictionaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructing-a-dictionary" class="md-nav__link">
+    Constructing a dictionary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-a-value" class="md-nav__link">
+    Accessing a value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionaries-are-mutable" class="md-nav__link">
+    Dictionaries are mutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-dictionaries" class="md-nav__link">
+    Nested Dictionaries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    Tuples
+  </a>
+  
+    <nav class="md-nav" aria-label="Tuples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructing-tuples" class="md-nav__link">
+    Constructing Tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immutability" class="md-nav__link">
+    Immutability
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets" class="md-nav__link">
+    Sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditionals-if-else-and-elif" class="md-nav__link">
+    Conditionals : if, else and elif
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-loop" class="md-nav__link">
+    for Loop
+  </a>
+  
+    <nav class="md-nav" aria-label="for Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterating-through-a-list" class="md-nav__link">
+    Iterating through a list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while-loop" class="md-nav__link">
+    while loop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    HANDS-ON
+  </a>
+  
+    <nav class="md-nav" aria-label="HANDS-ON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nric-validator" class="md-nav__link">
+    NRIC validator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-practice-questions" class="md-nav__link">
+    Optional Practice Questions!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/3DCdsc/Introduction_to_Programming/edit/master/docs/Day_1/python_basics.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="day-1">Day 1<a class="headerlink" href="#day-1" title="Permanent link">&para;</a></h1>
+<h2 id="what-you-will-be-learning-today">What you will be learning today:<a class="headerlink" href="#what-you-will-be-learning-today" title="Permanent link">&para;</a></h2>
+<ul>
+<li>What is Coding? Why Python?</li>
+<li>Variables and simple data types</li>
+<li>Intro to Functions</li>
+<li>Operators</li>
+<li>Strings</li>
+<li>Introduction to Lists</li>
+<li>Dictionaries</li>
+<li>Tuples</li>
+<li>Sets</li>
+<li><strong>If</strong> statements </li>
+<li>loops: <strong>while</strong> and <strong>for</strong></li>
+</ul>
+<h2 id="what-is-coding">What is Coding?<a class="headerlink" href="#what-is-coding" title="Permanent link">&para;</a></h2>
+<p>Computer coding is the use of computer <strong>programming</strong> <strong>languages</strong>  to give computers and machines as <strong>set</strong> <strong>of</strong> <strong>instructions</strong> on what actions to perform. It’s how humans communicate with machines.</p>
+<p>Allows us to create computer software like programs, operating systems, and mobile apps.</p>
+<p>Without coding, computers would literally do nothing. They would be completely useless. That’s because source code is the set of instructions that tells the computer what to do. Computers have no free will, after all, so without explicit instruction, they’re just sophisticated hunks of metal.</p>
+<p>Think of anything you’ve ever done with a computer:</p>
+<ul>
+<li>Play a video game.</li>
+<li>Send an email.</li>
+<li>Search for something on Google.</li>
+<li>Write a word document.</li>
+<li>Take a selfie on your smartphone (also a computer).</li>
+<li>Buy something on Amazon.</li>
+<li>Watch a movie on Netflix.</li>
+</ul>
+<p>All of those applications are software written in code.</p>
+<h2 id="why-python">Why Python?<a class="headerlink" href="#why-python" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Incredibly efficient language</p>
+</li>
+<li>
+<p>"Clean code"</p>
+</li>
+<li>
+<p>EASY to read, debug, build up and extend</p>
+</li>
+</ol>
+<p>following is the the Python code that literally tells the computer to print 'I am awesome':</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am awesome&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>when in Java it is</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorld</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;I am awesome&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>And in C++ it is:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;I&#39;am awesome.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
+<p>Variables are often described as boxes you can store values in.
+This idea can be helpful the first few times you use a variable, but it’s much better to think of variables as labels that you can assign to values. 
+You can also say that a variable references a certain value.</p>
+<p><strong>Data type</strong>  is an attribute of data which tells the compiler or interpreter how the programmer intends to use the data.</p>
+<p>A variable can be assigned to different types of values. </p>
+<p>Some basic data types in Python are:</p>
+<ul>
+<li><strong>int</strong> : integer data type. Stores numbers without decimal points </li>
+<li><strong>float</strong> : float data type. Stores decimal numbers with floating points</li>
+<li><strong>str</strong> : sequences of character data. We will be going into further detail later.</li>
+<li><strong>boolean</strong> : Objects of Boolean type may have one of two values, True or False</li>
+</ul>
+<p>Composite data types in Python :
+ We will be exploring these data types in detail</p>
+<ul>
+<li><strong>list</strong> : A list is a collection of items in a particular order</li>
+<li><strong>dict</strong>: A dictionary in Python is a collection of key-value pairs. Each key is connected
+to a value, and you can use a key to access the value associated with that key</li>
+<li><strong>tuple</strong> : A tuple looks just like a list except you use parentheses instead of square
+brackets. </li>
+<li><strong>set</strong> : Sets are used to store multiple items in a single variable</li>
+<li><strong>frozenset</strong> :frozenset is same as set except its elements cannot be changed.</li>
+</ul>
+<h3 id="variable-assignment">Variable Assignment<a class="headerlink" href="#variable-assignment" title="Permanent link">&para;</a></h3>
+<p>Now let's see how to assign a variable the right way!</p>
+<p>Rules for Variable Names: </p>
+<ul>
+<li>Variable names can contain only letters, numbers, and underscores.
+They can start with a letter or an underscore, but not with a number.
+For instance, you can call a variable message_1 but not 1_message.</li>
+</ul>
+<p>The following special symbols also cannot be used in a variable name: </p>
+<div class="highlight"><pre><span></span><code>:&#39;&quot;,&lt;&gt;/?|\!@#%^&amp;*~-+
+</code></pre></div>
+<ul>
+<li>
+<p>Spaces are not allowed in variable names, but underscores can be used
+to separate words in variable names. For example, <em>greeting_message</em>
+works, but <em>greeting message</em> will cause errors.</p>
+</li>
+<li>
+<p>Avoid using Python keywords and function names as variable names.  Keywords are words that Python has reserved for a particular programmatic purpose. Some examples of keywords are : <strong>print</strong>, <strong>input</strong>, <strong>type</strong>. </p>
+</li>
+<li>
+<p>Variable names should be short but descriptive. For example, name is better than n, student_name is better than s_n, and name_length is better
+than length_of_persons_name.</p>
+</li>
+<li>
+<p>Be careful when using the lowercase letter l and the uppercase letter O because they could be confused with the numbers 1 and 0.</p>
+</li>
+</ul>
+<p><strong>NOT ALLOWED: Will throw error</strong></p>
+<p>5five = 10 (Starting with a number)</p>
+<p>my var = 10 (Using spaces)</p>
+<p>my_var* = 10 (Using special symbols)</p>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<h3 id="why-do-we-need-them">Why do we need them?<a class="headerlink" href="#why-do-we-need-them" title="Permanent link">&para;</a></h3>
+<p>Functions are a piece of code designed to do a certain task. </p>
+<p>Functions can be in-built or user-defined</p>
+<p>Consider the statement  :</p>
+<p><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</code></pre></div>
+print() is an in-built function of Python. It prints the specified message to the screen.</p>
+<p>But what if we want to print a statement at different parts of the program?</p>
+<p>Or let's say, you want to do the same task,( such as finding the average of given numbers, or printing out names ) again and again, at different times? Would you write that piece of code again ?</p>
+<p>Here's why we need functions.</p>
+<p>When you DEFINE a function, you can use the same code more than once, from any part of the program by CALLING it.
+Let's see how to do that!</p>
+<h3 id="defining-a-function">Defining a function<a class="headerlink" href="#defining-a-function" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">task_print</span><span class="p">():</span>   <span class="c1">#def is a keyword used for defining a function</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>     <span class="c1"># use indentations after the first staement to create the body</span>
+</code></pre></div>
+<h3 id="calling-a-function">Calling a Function<a class="headerlink" href="#calling-a-function" title="Permanent link">&para;</a></h3>
+<p>Defining the function means simply writing some code. Running it will not give you anything since you are not <strong>using it</strong>. </p>
+<p>So you need to call the function to execute its body:
+<div class="highlight"><pre><span></span><code><span class="n">task_print</span><span class="p">()</span>  <span class="c1"># simply the function name with the brackets. Now try running it!</span>
+</code></pre></div></p>
+<p>What are the brackets for?</p>
+<p>A function often receives certain arguments which are used in the function body. </p>
+<p>For example, if you want to print a name on the screen but the name is to be given by the user, you can pass the name as an ARGUMENT to the function</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">task_2</span> <span class="p">(</span><span class="n">name</span><span class="p">):</span>  <span class="c1"># function definition</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">task_2</span><span class="p">(</span><span class="s2">&quot;Zac&quot;</span><span class="p">)</span>    <span class="c1"># function Call</span>
+<span class="n">task_2</span><span class="p">(</span><span class="s2">&quot;I can change the name !&quot;</span><span class="p">)</span>
+<span class="n">task_2</span><span class="p">(</span><span class="s2">&quot;Emily&quot;</span><span class="p">)</span>
+</code></pre></div>
+in the above example, "Zac" is an argument which is used in the CALL statement. </p>
+<p>This argument gets passed to the function definition. Thus <code>name</code> is an argument that now has the value Zac.</p>
+<h3 id="return-statement">Return Statement<a class="headerlink" href="#return-statement" title="Permanent link">&para;</a></h3>
+<p>We just saw how functions can receive arguments and work upon them. 
+What if we want to extract some value from the function, i.e. , we want the function to RETURN something?</p>
+<p><code>return</code> statement is used in the function body to return a value ( or values) back to the function call . </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span> <span class="p">:</span>   
+  <span class="n">total</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+  <span class="k">return</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+
+<span class="n">num1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">addition_product</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span>  <span class="c1">#the value returned by the function is now assigned to the variable &quot;addition product&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">addition_product</span><span class="p">)</span>
+</code></pre></div>
+<p>Do NOTE that functions don't necessarily have to return a value:
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span> <span class="p">:</span>   
+  <span class="n">total</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>         
+
+<span class="n">num1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">addition_product</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span>  <span class="c1">#the value returned by the function is now assigned to the variable &quot;addition product&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">addition_product</span><span class="p">)</span>
+</code></pre></div>
+In the above function, there is no return statement. Thus the <code>None</code> value of <code>addition_product</code></p>
+<h3 id="other-in-built-functions">Other in-built functions<a class="headerlink" href="#other-in-built-functions" title="Permanent link">&para;</a></h3>
+<p>You have learnt to define and call your own function. Let's see some more in-built functions of Python </p>
+<p>What if you want to know what data type is the variable?</p>
+<p><strong>type()</strong> : this in-built function is used to determine the data type of the variable
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+<span class="nb">type</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> 
+</code></pre></div>
+Suppose you don't know what value should be assigned to your variable and want to ask the user for the value. you can do this using <strong>input()</strong></p>
+<p><strong>input()</strong> method reads a line from input, converts into a string and returns it.</p>
+<div class="highlight"><pre><span></span><code><span class="n">message</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You entered: &quot;</span> <span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+
+<span class="c1">#Suppose you want to print a message to the user for asking the value</span>
+<span class="n">second_message</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">second_message</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="converting-data-types">Converting data types<a class="headerlink" href="#converting-data-types" title="Permanent link">&para;</a></h3>
+<p>Data types can be converted from one form to another using in-built functions like int(), str(), float().</p>
+<p>However, do note that <strong>not</strong> every conversion is possible!</p>
+<p>Can you convert an int type to a string type? 
+<div class="highlight"><pre><span></span><code><span class="c1">#using the in-built function str()</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">num</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</code></pre></div></p>
+<p>How about converting str to int?</p>
+<div class="highlight"><pre><span></span><code><span class="n">letter</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
+<span class="n">letter</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span> 
+
+<span class="n">letter1</span> <span class="o">=</span> <span class="s1">&#39;3&#39;</span>
+<span class="n">letter1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">letter1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">letter1</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h2>
+<p><strong>Arithmetic Operators:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># Output: x + y = 19</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x + y =&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x - y = 11</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x - y =&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x * y = 60</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x * y =&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x / y = 3.75</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x / y =&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x // y = 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x // y =&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">//</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x ** y = 50625</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x ** y =&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">**</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Comparison Operators:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="c1"># Output: x &gt; y is False</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x &gt; y is&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x &lt; y is True</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x &lt; y is&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x == y is False</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x == y is&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x != y is True</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x != y is&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">!=</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x &gt;= y is False</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x &gt;= y is&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">&gt;=</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Output: x &lt;= y is True</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x &lt;= y is&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Logical Operators :</strong>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">y</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x and y is&#39;</span><span class="p">,</span><span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x or y is&#39;</span><span class="p">,</span><span class="n">x</span> <span class="ow">or</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;not x is&#39;</span><span class="p">,</span><span class="ow">not</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Shorthand Assignment operators:</strong> </p>
+<p>In normal mathematics expressions:</p>
+<p>var = 0</p>
+<p>var = var +1   would mean 0 = 1</p>
+<p>But in python, the same expression has a different meaning .
+It means that the value of var is incremented by one and then assigned back to var. </p>
+<p>Thus the expression would store the value of 1 in var. </p>
+<h2 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h2>
+<p>A string is a series of characters. Anything inside quotes is considered
+a string in Python, and you can use single or double quotes around your
+strings :</p>
+<ul>
+<li>
+<p>I told my friend, "Python is my favorite language!"'</p>
+</li>
+<li>
+<p>"The language 'Python' is named after Monty Python, not the snake."</p>
+</li>
+<li>
+<p>"One of Python's strengths is its diverse and supportive community."</p>
+</li>
+</ul>
+<h3 id="string-indexing-and-slicing">String indexing and slicing<a class="headerlink" href="#string-indexing-and-slicing" title="Permanent link">&para;</a></h3>
+<p>Strings are a sequence, which means Python can use indexes to call parts of the sequence. </p>
+<p><strong>Indexing</strong> - Retrieving one letter from the string</p>
+<p><strong>Slicing</strong> - Retrieving multiple letters (Sub-string) from the string</p>
+<p>In Python, we use brackets [] after an object to call its index. We should also note that indexing starts at 0 for Python. Let's create a new object called s and then walk through a few examples of indexing.</p>
+<p>Syntax for []: Starting Index (Inclusive), End Index (Exclusive), Step Size</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Outputs the first letter. Remember: In Python, index starts from &#39;0&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_var</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># Outputs the first to fourth letter. Indexing works by INCLUDING left bound but EXCLUDING right bound</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_var</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># Outputs the first and third letter.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_var</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># Reversing a string</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_var</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div>
+<strong>Practice 1 :</strong></p>
+<p>Print 'I Love Coding' from the string below:</p>
+<p>s = "3DC'20 - I Love Coding!"</p>
+<h3 id="strings-are-immutable">Strings are immutable<a class="headerlink" href="#strings-are-immutable" title="Permanent link">&para;</a></h3>
+<p>This means that once a string is created, the elements within it can not be changed or replaced. For example:
+<div class="highlight"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;I love coding&quot;</span>
+
+<span class="c1">#try changing the first letter to x</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;x&quot;</span>
+<span class="c1">#What do you get?</span>
+</code></pre></div></p>
+<h3 id="string-concatenation">String Concatenation<a class="headerlink" href="#string-concatenation" title="Permanent link">&para;</a></h3>
+<p>Dictionary definition of concatenation: "the action of linking things together in a series, or the condition of being linked in such a way"</p>
+<p>Layman term: Joining 2 or more strings together
+<div class="highlight"><pre><span></span><code><span class="n">s</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">#we can reassign the new string back to s</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="s2">&quot; concatenate me&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</code></pre></div></p>
+<p>How does the multiplication operator behave with strings ? 
+<div class="highlight"><pre><span></span><code><span class="n">length</span> <span class="o">=</span> <span class="s2">&quot;z&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">length</span> <span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Practice 2:</strong></p>
+<p>Suppose you had a person's name in a variable:</p>
+<p>myName = "Kenny Carney"</p>
+<p>However, you want the surname Carney first and then the first name of Kenny. Use slicing to print out Carney Kenny.</p>
+<p>Remember: you can use the plus symbol and spaces to concatenate:  print(surname + " " + firstName)</p>
+<p><strong>Advanced Practice : Palindromes</strong></p>
+<p>Given a string, write a code to check if it is palindrome or not.
+A string is said to be palindrome if the reverse of the string is the same as string.
+For example, “radar” is a palindrome, but “radix” is not a palindrome.</p>
+<h2 id="introduction-to-lists">Introduction to Lists<a class="headerlink" href="#introduction-to-lists" title="Permanent link">&para;</a></h2>
+<p>A list is a collection of items in a particular order.</p>
+<p>In Python, square brackets ([ ]) indicate a list, and individual elements in the list are separated by commas</p>
+<div class="highlight"><pre><span></span><code><span class="n">bicycles</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;trek&#39;</span><span class="p">,</span> <span class="s1">&#39;cannondale&#39;</span><span class="p">,</span> <span class="s1">&#39;redline&#39;</span><span class="p">,</span> <span class="s1">&#39;specialized&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bicycles</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="accessing-elements">Accessing Elements<a class="headerlink" href="#accessing-elements" title="Permanent link">&para;</a></h3>
+<p>Lists are ordered collections, so you can access any element in a list by telling Python the position, or index, of the item desired</p>
+<ul>
+<li>Python considers the first item in a list to be at position 0, not position 1.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">bicycles</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+<ul>
+<li>To access elements from the back of a list, use a negative index.</li>
+</ul>
+<p>An index of -1 would access the last element, -2 would access the second last element and so on. 
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="p">)</span>
+</code></pre></div></p>
+<h3 id="lists-are-mutable">Lists are mutable<a class="headerlink" href="#lists-are-mutable" title="Permanent link">&para;</a></h3>
+<p>You do this by referencing the element of the list and assigning a new object to it. 
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> 
+<span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SUTD&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="len-function">len() function<a class="headerlink" href="#len-function" title="Permanent link">&para;</a></h3>
+<p>The length of a list is the number of elements that it contains. </p>
+<p>Use the <code>len</code> function to check its length. 
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</code></pre></div></p>
+<h3 id="creating-a-list">Creating a list<a class="headerlink" href="#creating-a-list" title="Permanent link">&para;</a></h3>
+<p>An empty list has a length of zero. </p>
+<p>You can either use the <code>list()</code> function or <code>[]</code> to create an empty list. 
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</code></pre></div></p>
+<p>Using <strong>range()</strong></p>
+<p>range() function is used to produce numbers using a start, stop, step </p>
+<p>range(2,10,1) will produce numbers starting from 2, incrementing by 2, till it becomes 10. </p>
+<p>Note that it DOES NOT include 10 </p>
+<p>As the <code>range()</code> function is not a list, you need to pass it to the <code>list()</code> function to create a list. </p>
+<div class="highlight"><pre><span></span><code> <span class="n">ls</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+ <span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="methods-of-lists"><strong>Methods</strong> of Lists<a class="headerlink" href="#methods-of-lists" title="Permanent link">&para;</a></h3>
+<p>The term <strong>method</strong> refers to a function that is attached to a data type. </p>
+<p>A list object has functions attached to it. </p>
+<p>These are called <strong>methods</strong>. You access methods using the dot operator.</p>
+<p>Note: <strong>All of the below functions are applied directly to the original list</strong></p>
+<ul>
+<li>append() : add elements to the back of a list.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span> 
+<span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="s1">&#39;five&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>pop() : Removes the last element from the list.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Remove the last element from the list</span>
+<span class="n">ls</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;This will be removed from the list&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span>
+<span class="n">ls</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="c1"># Note that .pop() is applied directly to the list I.e. There is no need to do ls = ls.pop()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>reverse() : Reverses the order of all elements in the list.
+<div class="highlight"><pre><span></span><code><span class="c1"># Reverses the order of the list</span>
+<span class="n">ls</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span>
+</code></pre></div></li>
+</ul>
+<h3 id="list-slicing">List Slicing<a class="headerlink" href="#list-slicing" title="Permanent link">&para;</a></h3>
+<p>In the following example, a list assigned to <code>b</code> is created by extracting element with index <code>2</code>, <strong>up to but not including</strong> element index <code>4</code>. The default increment is 1. </p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;horse&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;chicken&#39;</span><span class="p">,</span> <span class="s1">&#39;rat&#39;</span><span class="p">,</span><span class="s1">&#39;duck&#39;</span><span class="p">,</span> <span class="s1">&#39;pigeon&#39;</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+<p>In the following example, a list assigned to <code>b</code> is created by extracting element with index <code>1</code>, <strong>up to and including the last element</strong>, in increments of <code>2</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;horse&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;chicken&#39;</span><span class="p">,</span> <span class="s1">&#39;rat&#39;</span><span class="p">,</span><span class="s1">&#39;duck&#39;</span><span class="p">,</span> <span class="s1">&#39;pigeon&#39;</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+<p>The <strong>in</strong> Keyword
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;horse&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;chicken&#39;</span><span class="p">,</span> <span class="s1">&#39;rat&#39;</span><span class="p">,</span><span class="s1">&#39;duck&#39;</span><span class="p">,</span> <span class="s1">&#39;pigeon&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cat&#39;</span> <span class="ow">in</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;donkey&#39;</span> <span class="ow">in</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></div></p>
+<p>The "+", " * " and "=="  operators with lists </p>
+<p>Recall that the "+" operator behaves differently with two numbers compared to two strings. </p>
+<p>The "+"and " * "  operators behave differently with lists, compared to the numeric datatypes. </p>
+<ul>
+<li>
+<p>The "+" operator performs concatenation when both its operands are lists. 
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>The " * " operator works with a list and an integer. 
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>The " == " operator checks the equality of two lists. This includes the length and all the elements in the list
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="copying-a-list">Copying a list<a class="headerlink" href="#copying-a-list" title="Permanent link">&para;</a></h3>
+<p>By writing <code>b=a</code> in the example below, we are not creating a copy of a list. </p>
+<p>Recall that the <code>=</code> operator is an assignment operator. </p>
+<p>What the code does below is <strong>aliasing</strong>. The same set of data that is referenced by variable <code>a</code> is also referenced by <code>b</code>.</p>
+<p>In other words, both variables <code>a</code> and <code>b</code> refer to the same set of information. </p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+</code></pre></div>
+<p>Hence, what would we see on the screen if we had the following code? </p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<p>A <strong>list slice</strong> creates a copy of a list. </p>
+<p>List slicing can be used to create a copy of a list 
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="the-is-operator">The <code>is</code> operator<a class="headerlink" href="#the-is-operator" title="Permanent link">&para;</a></h3>
+<p>The <code>is</code> operator checks if aliasing is happening. 
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Practice 3</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">#1. What will the below code produce?</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">==</span> <span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</code></pre></div></p>
+<h2 id="dictionaries">Dictionaries<a class="headerlink" href="#dictionaries" title="Permanent link">&para;</a></h2>
+<p>We've been learning about sequences in Python but now we're going to switch gears and learn about mappings in Python. If you're familiar with other languages you can think of these Dictionaries as hash tables.</p>
+<p>So what are mappings?</p>
+<p><strong>Mappings</strong> are a collection of objects that are stored by a key, unlike a sequence that stores objects by their relative position. This is an important distinction, since mappings won't retain order since they have objects defined by a key.</p>
+<p>A Python dictionary consists of a key and then an associated value. That value can be almost any Python object.</p>
+<h3 id="constructing-a-dictionary">Constructing a dictionary<a class="headerlink" href="#constructing-a-dictionary" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Make a dictionary with {} and : to signify a key and a value</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key1&#39;</span><span class="p">:</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span><span class="s1">&#39;key2&#39;</span><span class="p">:</span><span class="s1">&#39;value2&#39;</span><span class="p">}</span>
+</code></pre></div>
+<h3 id="accessing-a-value">Accessing a value<a class="headerlink" href="#accessing-a-value" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Access a value by inputting its key</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s2">&quot;key1&quot;</span><span class="p">]</span>
+
+<span class="c1"># Dictionaries, like lists, can hold different data types</span>
+<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key1&#39;</span><span class="p">:</span><span class="mi">123</span><span class="p">,</span><span class="s1">&#39;key2&#39;</span><span class="p">:[</span><span class="mi">12</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">33</span><span class="p">],</span><span class="s1">&#39;key3&#39;</span><span class="p">:[</span><span class="s1">&#39;item0&#39;</span><span class="p">,</span><span class="s1">&#39;item1&#39;</span><span class="p">,</span><span class="s1">&#39;item2&#39;</span><span class="p">]}</span>
+</code></pre></div>
+<h3 id="dictionaries-are-mutable">Dictionaries are <strong>mutable</strong><a class="headerlink" href="#dictionaries-are-mutable" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># The values can be reassigned</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s2">&quot;key1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">456</span>
+
+<span class="c1"># New values can be assigned</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s2">&quot;key4&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;New Value&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="nested-dictionaries">Nested Dictionaries<a class="headerlink" href="#nested-dictionaries" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Accessing nested dictionaries</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;k1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,{</span><span class="s1">&#39;k2&#39;</span><span class="p">:[[</span><span class="s2">&quot;Hello!&quot;</span><span class="p">]]}]}</span>
+<span class="n">d</span><span class="p">[</span><span class="s1">&#39;k1&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="s1">&#39;k2&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+<strong>Practice 4:</strong></p>
+<p>Retrieve 'Coding is fun unless you're doing it wrong'
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;k1&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,{</span><span class="s1">&#39;k2&#39;</span><span class="p">:[</span><span class="s1">&#39;pls do not do this&#39;</span><span class="p">,{</span><span class="s1">&#39;have fun&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,[</span><span class="s1">&#39;Coding is fun unless you</span><span class="se">\&#39;</span><span class="s1">re doing it wrong&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]}]}]}</span>
+</code></pre></div></p>
+<h2 id="tuples">Tuples<a class="headerlink" href="#tuples" title="Permanent link">&para;</a></h2>
+<p>In Python tuples are very similar to lists, however, unlike lists they are <strong>immutable</strong> meaning they can not be changed.</p>
+<p>You would use tuples to present things that shouldn't be changed, such as days of the week, or dates on a calendar. </p>
+<p>You'll have an intuition of how to use tuples based on what you've learned about lists. </p>
+<h3 id="constructing-tuples">Constructing Tuples<a class="headerlink" href="#constructing-tuples" title="Permanent link">&para;</a></h3>
+<p>The construction of a tuples use <code>()</code> with elements separated by commas. For example:
+<div class="highlight"><pre><span></span><code><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;This will not change&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="immutability">Immutability<a class="headerlink" href="#immutability" title="Permanent link">&para;</a></h3>
+<p>It can't be stressed enough that tuples are immutable.
+<strong>No variable reassignment!</strong></p>
+<p>To drive that point home:
+<div class="highlight"><pre><span></span><code><span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;This will not work</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></p>
+<h2 id="sets">Sets<a class="headerlink" href="#sets" title="Permanent link">&para;</a></h2>
+<p>Sets are an <strong>unordered collection of <em>unique</em> elements</strong>. We can construct them by using the set() function.</p>
+<p>What's the purpose? One main reason is to <strong>identify unique elements from a list</strong></p>
+<p><code>x = set()</code></p>
+<p><code>x.add(1)</code></p>
+<p><code>x</code></p>
+<p>Note the curly brackets. This does not indicate a dictionary! Although you can draw analogies as a set being a dictionary with only keys.</p>
+<p>We know that a set has only unique entries. So what happens when we try to add something that is already in a set?</p>
+<p><code>x.add(1)</code></p>
+<p><code>x # Notice how there is still only 1 element?</code></p>
+<h2 id="conditionals-if-else-and-elif">Conditionals : if, else and elif<a class="headerlink" href="#conditionals-if-else-and-elif" title="Permanent link">&para;</a></h2>
+<p>Programming often involves examining a set of conditions and deciding which action to take based on those conditions.</p>
+<p>Python’s if statement allows you to examine the current state of a program and respond appropriately to that state.
+<div class="highlight"><pre><span></span><code><span class="n">cars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;audi&#39;</span><span class="p">,</span> <span class="s1">&#39;bmw&#39;</span><span class="p">,</span> <span class="s1">&#39;subaru&#39;</span><span class="p">,</span> <span class="s1">&#39;toyota&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">car</span> <span class="ow">in</span> <span class="n">cars</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">car</span> <span class="o">==</span> <span class="s1">&#39;bmw&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="n">car</span> <span class="o">=</span><span class="s1">&#39;bmw&#39;</span>
+<span class="n">car</span> <span class="o">==</span><span class="s1">&#39;bmw&#39;</span>  <span class="c1"># What is the difference between the two operators?</span>
+</code></pre></div>
+<p>Checking for inequality :
+<div class="highlight"><pre><span></span><code><span class="n">requested_topping</span> <span class="o">=</span> <span class="s1">&#39;mushrooms&#39;</span>
+<span class="k">if</span> <span class="n">requested_topping</span> <span class="o">!=</span> <span class="s1">&#39;anchovies&#39;</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hold the anchovies!&quot;</span><span class="p">)</span>
+  <span class="err">```</span>
+
+<span class="c1">### If-else block</span>
+
+<span class="n">An</span> <span class="k">if</span><span class="o">-</span><span class="k">else</span> <span class="n">block</span> <span class="ow">is</span> <span class="n">similar</span> <span class="n">to</span> <span class="n">a</span> <span class="n">simple</span> <span class="k">if</span> <span class="n">statement</span><span class="p">,</span> <span class="n">but</span> <span class="n">the</span> <span class="k">else</span> <span class="n">statement</span> <span class="n">allows</span> <span class="n">you</span> <span class="n">to</span> <span class="n">define</span> <span class="n">an</span> <span class="n">action</span> <span class="ow">or</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">actions</span> <span class="n">that</span> <span class="n">are</span> <span class="n">executed</span> <span class="n">when</span> <span class="n">the</span> <span class="n">conditional</span> <span class="n">test</span> <span class="n">fails</span><span class="o">.</span>
+<span class="err">```</span><span class="n">python</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are old enough to vote!&quot;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Have you registered to vote yet?&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, you are too young to vote.&quot;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please register to vote as soon as you turn 18!&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">NOTE<p>The else block is a catchall statement. It matches any condition that wasn’t matched by a specific if or elif test, and that can sometimes include invalid or even malicious data.</p>
+<p>If you have a specific final condition you are testing for, consider using a final elif block and omit the else block.</p>
+<p>As a result, you’ll gain extra confidence that your code will run only under the correct conditions.</p>
+</p>
+</div>
+<h2 id="for-loop">for Loop<a class="headerlink" href="#for-loop" title="Permanent link">&para;</a></h2>
+<p>A <code>for</code> loop acts as an iterator in Python; it goes through items that are in a <em>sequence</em> or any other iterable item. </p>
+<p>Objects that we've learned about that we can iterate over include strings, lists, tuples, and even built-in iterables for dictionaries, such as keys or values.</p>
+<p>Here's the general format for a  <code>for</code> loop in Python:</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">object</span><span class="p">:</span>
+        <span class="n">statements</span> <span class="n">to</span> <span class="n">do</span> <span class="n">stuff</span>
+</code></pre></div>
+<h3 id="iterating-through-a-list">Iterating through a list<a class="headerlink" href="#iterating-through-a-list" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="c1"># Note: The list can also be created via range()</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+
+<span class="c1"># This is the same as the following:</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="while-loop">while loop<a class="headerlink" href="#while-loop" title="Permanent link">&para;</a></h2>
+<p>A bit similar to for loop, but it keeps running until the condition is false</p>
+<p>The main difference between for loop and while loop is </p>
+<ul>
+<li>
+<p>for loop is used in situations where you know the number of iterations to go through</p>
+</li>
+<li>
+<p>while loop is used in situations where you do not know the number of iterations to go through but you know what is the condition that it should stop</p>
+</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Only when the condition behind the while statement is True, then only  it will enter the loop</span>
+<span class="c1"># So do remember to update the condition for you to exit the while loop.</span>
+<span class="c1"># Unless you want it to run forever</span>
+
+<span class="n">index</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This statement is printed </span><span class="si">{}</span><span class="s1"> times&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+  <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+</code></pre></div>
+<strong>Practice 6:</strong>
+one of the important application of while loop is to validate input from user</p>
+<p>prompt the user to input their gender and if its not M or F you will notify them that its wrong input and ask them to input again</p>
+<h2 id="hands-on">HANDS-ON<a class="headerlink" href="#hands-on" title="Permanent link">&para;</a></h2>
+<p>Now that we have learnt the fundamentals of python programming, let's built something of our own that's useful!</p>
+<h3 id="nric-validator">NRIC validator<a class="headerlink" href="#nric-validator" title="Permanent link">&para;</a></h3>
+<p>Do you know how to verify an NRIC number? Here are some guidelines:
+The steps involved in the computation are as follows:</p>
+<p>1) Multiply each digit in the NRIC number by its weight i.e. 2 7 6 5 4 3 2 in order.</p>
+<p>2) Add together the above products.</p>
+<p>3) If the first letter i.e. UIN of the NRIC starts with T or G, add 4 to the total.</p>
+<p>4) Find the remainder of (sum calculated above) mod 11. (total %11)</p>
+<p>5) Compare the digit you get from last step to the following list: 
+    If the NRIC starts with F or G: 0=X, 1=W, 2=U, 3=T, 4=R, 5=Q, 6=P, 7=N, 8=M,  9=L, 10=K. 
+    If the NRIC starts with S or T: 0=J, 1=Z, 2=I, 3=H, 4=G, 5=F, 6=E, 7=D, 8=C, 9=B, 10=A</p>
+<p>After matching to the list, the letter that you get should be the last letter of the nric code ! And thus the nric number is verified!</p>
+<p>How to go about it? </p>
+<p>Do you need functions?</p>
+<p>Which data type(complex) would you use for assigning the alphabets to digits in step 5 ?</p>
+<h2 id="optional-practice-questions">Optional Practice Questions!<a class="headerlink" href="#optional-practice-questions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Write a function to print the following pattern using for/ while loops : 
+            *</p>
+<div class="highlight"><pre><span></span><code>    **
+
+    ***
+
+    ****
+
+    *****
+</code></pre></div>
+</li>
+<li>
+<p>Factorial of a number n is represented by n! and is equal to 1 * 2 * 3 * .... * (n-1) * n</p>
+<p>5! = 5 * 4 * 3 * 2 * 1 = 120</p>
+<p>Write a program to calculate the factorial of a number given by the user</p>
+</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../Day_0/install_python_win/" class="md-footer__link md-footer__link--prev" aria-label="Previous: on Windows" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              on Windows
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../Day_2/git_overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Overview
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Digital Design and Development Club (3DC) &copy; 2019 - 2021. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/3DCdsc" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.twitch.tv/3dcdsc" target="_blank" rel="noopener" title="www.twitch.tv" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M391.17 103.47h-38.63v109.7h38.63ZM285 103h-38.63v109.75H285ZM120.83 0 24.31 91.42v329.16h115.83V512l96.53-91.42h77.25L487.69 256V0Zm328.24 237.75-77.22 73.12h-77.24l-67.6 64v-64h-86.87V36.58h308.93Z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCF56lQD1HWv-0uOQSXrTmLw" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.instagram.com/sutd3dc/" target="_blank" rel="noopener" title="www.instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://t.me/joinchat/C_Nni1C77ZlOVTdjU4yf4Q" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

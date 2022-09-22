@@ -1,0 +1,1818 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://3dc.opensutd.org/Introduction_to_Programming/Day_2/python%20oop/">
+      
+      <link rel="icon" href="../../imgs/code.svg">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>Python OOP - Introduction to Programming</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objected-oriented-programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Programming" class="md-header__button md-logo" aria-label="Introduction to Programming" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Programming
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python OOP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/3DCdsc/Introduction_to_Programming" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Introduction_to_Programming
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Programming" class="md-nav__button md-logo" aria-label="Introduction to Programming" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+
+    </a>
+    Introduction to Programming
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/3DCdsc/Introduction_to_Programming" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Introduction_to_Programming
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Workshop Materials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Workshop Materials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workshop Materials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Day 0
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 0" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Day 0
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_0/setup_guides/" class="md-nav__link">
+        Setup Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_0/install_git/" class="md-nav__link">
+        Install Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_1_3" type="checkbox" id="__nav_2_1_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_3">
+          Install Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Install Python" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Install Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_0/install_python_mac/" class="md-nav__link">
+        on macOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_0/install_python_win/" class="md-nav__link">
+        on Windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Day 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Day 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_1/python_basics/" class="md-nav__link">
+        Python Basics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Day 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 2" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Day 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_3_1" type="checkbox" id="__nav_2_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_1">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_data_model/" class="md-nav__link">
+        Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_local_concepts/" class="md-nav__link">
+        Key Concepts (Local)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_remote_concepts/" class="md-nav__link">
+        Key Concepts (Remote)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_example/" class="md-nav__link">
+        Example
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python OOP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python OOP
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-functions" class="md-nav__link">
+    1. Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-what-are-functions-and-why-do-we-need-them" class="md-nav__link">
+    1.1. What are functions and why do we need them?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-excersise-write-a-function-to-calculate-the-factorial-of-a-number" class="md-nav__link">
+    1.2. Excersise: Write a function to calculate the factorial of a number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-different-types-of-arguments" class="md-nav__link">
+    1.3. Different types of arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-type-hints" class="md-nav__link">
+    1.4 Type Hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-what-is-recursion-and-why-do-we-need-it" class="md-nav__link">
+    1.5 What is recursion, and why do we need it?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-excersise-what-does-this-piece-of-code-output" class="md-nav__link">
+    1.6 Excersise: What does this piece of code output?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-classes-and-objects" class="md-nav__link">
+    2. Classes and Objects
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Classes and Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-what-is-object-oriented-programming-and-why-do-we-need-it" class="md-nav__link">
+    2.1. What is Object Oriented Programming, and why do we need it?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-what-are-classes-and-why-do-we-need-them" class="md-nav__link">
+    2.2. What are classes, and why do we need them?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-classes-conventionally" class="md-nav__link">
+    2.3. Classes, conventionally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-excersise-write-a-class-that-describes-a-bicycle-object" class="md-nav__link">
+    2.4. Excersise: Write a class that describes a bicycle object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-what-makes-classes-so-good" class="md-nav__link">
+    2.5. What makes classes so good?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-an-object-can-also-have-other-objects-as-its-properties" class="md-nav__link">
+    2.6. An object can also have other objects as its properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-inheritance" class="md-nav__link">
+    3. Inheritance
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-what-is-inheritance-and-why-do-we-need-it" class="md-nav__link">
+    3.1. What is inheritance, and why do we need it?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-excersise-given-a-class-computer-write-a-subclass-laptop-and-desktop-with-the-given-additional-properties" class="md-nav__link">
+    3.2 Excersise: Given a class computer, Write a subclass laptop and desktop with the given additional properties:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          Day 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 3" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Day 3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_3/web_basics/" class="md-nav__link">
+        Web Basics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Day 4
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 4" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Day 4
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_4/server_basics/" class="md-nav__link">
+        Server Basics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          Day 5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Day 5" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Day 5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Day_5/intro_to_linux/" class="md-nav__link">
+        Intro to Linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-functions" class="md-nav__link">
+    1. Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-what-are-functions-and-why-do-we-need-them" class="md-nav__link">
+    1.1. What are functions and why do we need them?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-excersise-write-a-function-to-calculate-the-factorial-of-a-number" class="md-nav__link">
+    1.2. Excersise: Write a function to calculate the factorial of a number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-different-types-of-arguments" class="md-nav__link">
+    1.3. Different types of arguments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-type-hints" class="md-nav__link">
+    1.4 Type Hints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-what-is-recursion-and-why-do-we-need-it" class="md-nav__link">
+    1.5 What is recursion, and why do we need it?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-excersise-what-does-this-piece-of-code-output" class="md-nav__link">
+    1.6 Excersise: What does this piece of code output?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-classes-and-objects" class="md-nav__link">
+    2. Classes and Objects
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Classes and Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-what-is-object-oriented-programming-and-why-do-we-need-it" class="md-nav__link">
+    2.1. What is Object Oriented Programming, and why do we need it?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-what-are-classes-and-why-do-we-need-them" class="md-nav__link">
+    2.2. What are classes, and why do we need them?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-classes-conventionally" class="md-nav__link">
+    2.3. Classes, conventionally
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-excersise-write-a-class-that-describes-a-bicycle-object" class="md-nav__link">
+    2.4. Excersise: Write a class that describes a bicycle object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-what-makes-classes-so-good" class="md-nav__link">
+    2.5. What makes classes so good?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-an-object-can-also-have-other-objects-as-its-properties" class="md-nav__link">
+    2.6. An object can also have other objects as its properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-inheritance" class="md-nav__link">
+    3. Inheritance
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Inheritance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-what-is-inheritance-and-why-do-we-need-it" class="md-nav__link">
+    3.1. What is inheritance, and why do we need it?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-excersise-given-a-class-computer-write-a-subclass-laptop-and-desktop-with-the-given-additional-properties" class="md-nav__link">
+    3.2 Excersise: Given a class computer, Write a subclass laptop and desktop with the given additional properties:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/3DCdsc/Introduction_to_Programming/edit/master/docs/Day_2/python oop.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="objected-oriented-programming"><strong>Objected Oriented Programming</strong><a class="headerlink" href="#objected-oriented-programming" title="Permanent link">&para;</a></h1>
+<h2 id="1-functions">1. Functions<a class="headerlink" href="#1-functions" title="Permanent link">&para;</a></h2>
+<h3 id="11-what-are-functions-and-why-do-we-need-them">1.1. <em>What are functions and why do we need them?</em><a class="headerlink" href="#11-what-are-functions-and-why-do-we-need-them" title="Permanent link">&para;</a></h3>
+<p>Lets say that you are watching TV. Every time you want to change the channel, you will use the same remote control. It would be quite inconvenient if you had to make a new remote control each time you wanted to change the channel. Similarly, in programming, you might want to write a piece of code that you need to re-use multiple times in different parts of your program.</p>
+<p>For example, lets say that you write a program to find the largest number in a list:
+<div class="highlight"><pre><span></span><code><span class="n">list_of_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+<span class="nb">max</span> <span class="o">=</span> <span class="n">list_of_numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">list_of_numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">max</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
+        <span class="nb">max</span> <span class="o">=</span> <span class="n">number</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
+</code></pre></div></p>
+<p>But what if you need to find the largest value in 10 different lists? Would it be feasable to rewrite the same code again 10 different times? This is where functions come into the picture. They allow you to re-use the same piece of code again and again, however many times you might want.</p>
+<p>More formally, A function is a block of code that allows you to to perform a specific action. It is modular, and re-usable as many times as you want. Some functions might even give you back a value.</p>
+<p>For example, the same code written using functions would look something like:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># this line is known as the function prototype.</span>
+<span class="c1"># the variables inside the brackets are known as formal parameters or formal arguments</span>
+<span class="k">def</span> <span class="nf">max_value</span><span class="p">(</span><span class="n">list_of_numbers</span><span class="p">):</span>
+
+<span class="c1"># the word &#39;def&#39; is short for define. It means you are defining a function called &#39;max_value&#39;</span>
+
+<span class="c1"># In python, it is a convention to write function names in &#39;snake case&#39;</span>
+<span class="c1"># snake case means that the each word is in lower case, and separated by underscores.</span>
+<span class="c1"># Example: this_is_snake_case</span>
+
+    <span class="nb">max</span> <span class="o">=</span> <span class="n">list_of_numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">list_of_numbers</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">max</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
+            <span class="nb">max</span> <span class="o">=</span> <span class="n">number</span>
+
+    <span class="c1"># the word &#39;return&#39; here tells python that this function needs to give you back the value of &#39;max&#39;</span>
+    <span class="k">return</span> <span class="nb">max</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">44</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+<span class="n">list3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">96</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">26</span><span class="p">]</span>
+
+
+<span class="c1"># this is known as a function call and the variables passed to the function are called actual parameters or actual arguments</span>
+<span class="n">max1</span> <span class="o">=</span> <span class="n">max_value</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="n">max2</span> <span class="o">=</span> <span class="n">max_value</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+<span class="n">max3</span> <span class="o">=</span> <span class="n">max_value</span><span class="p">(</span><span class="n">list3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">max1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">max2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">max3</span><span class="p">)</span>
+</code></pre></div>
+<p>A function does not have to necessarily return a value:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">display_elements</span><span class="p">(</span><span class="n">a_list</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">44</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+<span class="n">list3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">96</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">26</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">display_elements</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">display_elements</span><span class="p">(</span><span class="n">list2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">display_elements</span><span class="p">(</span><span class="n">list3</span><span class="p">))</span>
+</code></pre></div>
+Output:
+<div class="highlight"><pre><span></span><code><span class="mi">32</span>
+<span class="mi">88</span>
+<span class="mi">3</span>
+<span class="mi">48</span>
+<span class="mi">87</span>
+<span class="mi">22</span>
+<span class="kc">None</span>
+<span class="mi">44</span>
+<span class="mi">26</span>
+<span class="mi">56</span>
+<span class="mi">90</span>
+<span class="mi">12</span>
+<span class="mi">35</span>
+<span class="kc">None</span>
+<span class="mi">96</span>
+<span class="mi">43</span>
+<span class="mi">30</span>
+<span class="mi">12</span>
+<span class="mi">37</span>
+<span class="mi">26</span>
+<span class="kc">None</span>
+</code></pre></div></p>
+<p>Why does it print a <code>None</code> between the elements of the lists? Remember, these functions don't return any values! Thus, <code>print(displayElementsOf(list1))</code> doesn't actually have something to print!</p>
+<p>Note: A function does not execute the rest of its code if a return statement is encountered</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">number</span><span class="o">*</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</code></pre></div>
+Output:
+<div class="highlight"><pre><span></span><code>10
+</code></pre></div></p>
+<h3 id="12-excersise-write-a-function-to-calculate-the-factorial-of-a-number">1.2. <em>Excersise: Write a function to calculate the factorial of a number</em><a class="headerlink" href="#12-excersise-write-a-function-to-calculate-the-factorial-of-a-number" title="Permanent link">&para;</a></h3>
+<p>The factorial of a number n, represented by n! is given by n*(n-1)*(n-2)*...*1. For example, 5! = 5*4*3*2*1 = 120</p>
+<h3 id="13-different-types-of-arguments">1.3. <em>Different types of arguments</em><a class="headerlink" href="#13-different-types-of-arguments" title="Permanent link">&para;</a></h3>
+<p>In python, there are 6 different types of arguments that a function can take. They are:</p>
+<p>1.3.1. Required Arguments: are arguments that MUST ALWAYS be passed to the function.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="c1"># a and b are required arguments</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="c1"># prints 8</span>
+</code></pre></div>
+<p>1.3.2. Optional Arguments: are arguments that may not be passed to the function.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="c1"># a and b are required arguments while c is an optional argument. All arguments initialised with a default value are optional</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="c1"># prints 8</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="c1"># prints 13</span>
+</code></pre></div>
+<p>Note: All optional arguments are always written after the positional arguments in the function prototype</p>
+<p>1.3.3. Positional Arguments: are arguments that are passed using their position to the function.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">simple_interest</span><span class="p">(</span><span class="n">principle</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+    <span class="c1"># principle, rate and time are all required arguments</span>
+    <span class="k">return</span> <span class="n">principle</span><span class="o">*</span><span class="n">rate</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="n">time</span>
+
+<span class="c1"># since they are passed to the function by their position, i.e. principle is 1000, rate is 15 and time is 5 </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">simple_interest</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="c1"># prints 750.0</span>
+</code></pre></div>
+<p>Note: In the example in point 2, the variable <code>c</code> is a positional argument that is optional!</p>
+<p>1.3.4. Keword Arguments: are arguments that are passed using their name to the function.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">simple_interest</span><span class="p">(</span><span class="n">rate</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">principle</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="c1"># rate and time are all required arguments while principle is an optional argument with a default value of 100</span>
+    <span class="k">return</span> <span class="n">principle</span><span class="o">*</span><span class="n">rate</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="n">time</span>
+
+<span class="c1"># since they are passed to the function </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">simple_interest</span><span class="p">(</span><span class="n">rate</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">principle</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">time</span> <span class="o">=</span> <span class="mi">5</span><span class="p">))</span>
+<span class="c1"># prints 750.0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">simple_interest</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="c1"># prints 75.0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">simple_interest</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">principle</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">time</span> <span class="o">=</span> <span class="mi">5</span><span class="p">))</span>
+<span class="c1"># prints 750.0</span>
+</code></pre></div>
+<p>Note1: Keyword arguments are always passed to the function after positional arguments!</p>
+<p>Thus, <code>simple_interest(15, time = 5, 1000)</code> isn't allowed, but <code>simple_interest(15, 5, principle = 1000)</code> is</p>
+<p>Note2: An argument cannot be called as both a positonal and a keyword argument IN THE SAME function call! <code>simple_interest(15, 5, rate = 15)</code> would not be valid since it calls rate as both a positional and a keyword argument</p>
+<p>1.3.5. Arbitrary Arguments(*args): When an unknown or "arbitrary" number of arguments are passed to a function, they are known as Arbitrary arguments</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_multiply</span><span class="p">(</span><span class="o">*</span><span class="n">nums</span><span class="p">,</span> <span class="n">multiply</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># nums is a required argument. the * denotes that it will accept an arbitrary number of arguments.</span>
+    <span class="c1"># nums will be a list of all the arguments provided</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+        <span class="nb">sum</span><span class="o">+=</span><span class="n">num</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="o">*</span><span class="n">multiply</span>
+
+<span class="c1"># add up all these numbers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="c1"># prints 19</span>
+
+<span class="c1"># add up all these numbers and also multiply by 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">multiply</span> <span class="o">=</span> <span class="mi">2</span><span class="p">))</span>
+<span class="c1"># prints 54</span>
+</code></pre></div>
+<p>Note1: Other arguments may follow an arbitrary argument but then that argument MUST ALWAYS be called as a keyword argument</p>
+<p>Note2: Other positional arguments may preceed an arbitrary argument</p>
+<p>Note3: An arbitrary argument CANNOT be called as a keyword argument!</p>
+<p>1.3.6. Arbitrary Keyword Arguments(**kwargs): When an unknown or "arbitrary" number of keyword arguments are passed to a function, they are known as Arbitrary arguments</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">display_works</span><span class="p">(</span><span class="n">author</span><span class="p">,</span> <span class="o">**</span><span class="n">works</span><span class="p">):</span>
+    <span class="c1"># works is a required argument. the ** denotes that it will accept an arbitrary number of keyword arguments.</span>
+    <span class="c1"># works will be a dictionary of all the keyword arguments and their values provided.</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">works</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">works</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
+
+<span class="n">display_works</span><span class="p">(</span><span class="s2">&quot;Roald Dahl&quot;</span><span class="p">,</span> <span class="n">book1</span><span class="o">=</span><span class="s2">&quot;Charlie and the Chocolate Factory&quot;</span><span class="p">,</span> <span class="n">book2</span><span class="o">=</span><span class="s2">&quot;Matilda&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Note1: No arguments can follow arbitrary keyword arguments.</p>
+<p>Note2: Any number of keyword or positional arguments can preceed arbitrary keyword arguments.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_multiply</span><span class="p">(</span><span class="o">*</span><span class="n">nums</span><span class="p">,</span> <span class="n">multiply</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># nums is a required argument. the * denotes that it will accept an arbitrary number of arguments.</span>
+    <span class="c1"># nums will be a list of all the arguments provided</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+        <span class="nb">sum</span><span class="o">+=</span><span class="n">num</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="o">*</span><span class="n">multiply</span>
+
+<span class="c1"># add up all these numbers</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="c1"># prints 19</span>
+
+<span class="c1"># add up all these numbers and also multiply by 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">multiply</span> <span class="o">=</span> <span class="mi">2</span><span class="p">))</span>
+<span class="c1"># prints 54</span>
+</code></pre></div>
+<h3 id="14-type-hints">1.4 <em>Type Hints</em><a class="headerlink" href="#14-type-hints" title="Permanent link">&para;</a></h3>
+<p>When writing functions with a lot of parameters and variable names that might be unintuitive, it is a good idea to use type hints! type hints allow the person writing the function to tell the user what the expected data types of all the arguments being passed into it are</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># this tells the user than height is a float, weight is an int and that this function is meant to return a float as well</span>
+<span class="k">def</span> <span class="nf">calculateBMI</span><span class="p">(</span><span class="n">height</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">weight</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">weight</span><span class="o">/</span><span class="p">((</span><span class="n">height</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calculateBMI</span><span class="p">(</span><span class="mi">182</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="15-what-is-recursion-and-why-do-we-need-it">1.5 <em>What is recursion, and why do we need it?</em><a class="headerlink" href="#15-what-is-recursion-and-why-do-we-need-it" title="Permanent link">&para;</a></h3>
+<p>Lets take the factorial from the previous excersie as an example.</p>
+<p>We have learnt that n! = n*(n-1)*(n-2)*...*1</p>
+<p>Similarly, (n-1)! = (n-1)*(n-2)*...*1</p>
+<p>But, notice that from these two equations we can actually write that n! = n*(n-1)!</p>
+<p>So if you were being introduced to the factorial for the first time, and you were just told that n! = n*(n-1)! would this be enough information to find out the factorial of any number? Try computing 3! just by using the definition that n! = n*(n-1)!.</p>
+<p>If you actually tried to do that, you would realise that its actually not possible because with that definition, you don't know when to stop!</p>
+<p>3! = 3*2!</p>
+<p>2! = 2*1!</p>
+<p>1! = 1*0!</p>
+<p>0! = 0*(-1)!</p>
+<p>...</p>
+<p>This means that other than the fact that n! = n*(n-1)! we also need a point to stop at. Lets say that you are now told that 0! = 1. With that information in mind, we can actually compute 3!</p>
+<p>3! = 3*2!</p>
+<p>2! = 2*1!</p>
+<p>1! = 1*0!</p>
+<p>and now, we know that 0! = 1, so now we use that in the last equation and work our way back up!</p>
+<p>1! = 1 and then using this, 2! = 2, and then using this, it is found that 3! = 6</p>
+<p>This process of defining a process in its own terms is known as recursion! The "stopping point" at which we stop going down and start to work back up is known as the base case! So can we do something like this with functions? Yes!</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+
+    <span class="c1"># remember to write a base case!</span>
+    <span class="c1"># If you forget, you&#39;re program will be stuck in an infinite loop of recursion!</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="c1"># the recursive case:</span>
+    <span class="k">return</span> <span class="n">number</span><span class="o">*</span><span class="n">factorial</span><span class="p">(</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="16-excersise-what-does-this-piece-of-code-output">1.6 <em>Excersise: What does this piece of code output?</em><a class="headerlink" href="#16-excersise-what-does-this-piece-of-code-output" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+        <span class="n">function</span><span class="p">(</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+<span class="n">function</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+Remember: A function will always execute ALL of its code UNLESS a return statement is encountered.</p>
+<h2 id="2-classes-and-objects">2. Classes and Objects<a class="headerlink" href="#2-classes-and-objects" title="Permanent link">&para;</a></h2>
+<h3 id="21-what-is-object-oriented-programming-and-why-do-we-need-it">2.1. <em>What is Object Oriented Programming, and why do we need it?</em><a class="headerlink" href="#21-what-is-object-oriented-programming-and-why-do-we-need-it" title="Permanent link">&para;</a></h3>
+<p>We come across a lot of different objects in our daily life. Each object has its own properties, some features that define it.</p>
+<p>Lets take a pen for example. What are the properties of a pen? Its colour, its size, its kind (ball-point, fountain-point, gel-ink) and maybe the name of its owner.</p>
+<p>Another example is a textbook. A textbook has a size, it has a subject, it has a length (the number of pages) and it has some information inside of it. Now the information inside a textbook is organised into named chapters.</p>
+<p>For example, a maths text book might contain chapters like "sets", "trigonometery", "calculus" and so on, and if you want someone to read or go through a chapter, you'd say something like "go through the chapter on calculus".</p>
+<p>Now imagine that you are a programmer who wants to write code that describes a pen, or a textbook... how could you go about writing code that expresses these properties discussed above?</p>
+<p>You might try writing code that looks similar to this:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">pen_colour</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
+<span class="n">pen_size</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">pen_kind</span> <span class="o">=</span> <span class="s2">&quot;ball&quot;</span>
+<span class="n">pen_owner</span> <span class="o">=</span> <span class="s2">&quot;John&quot;</span>
+
+<span class="c1"># wouldn&#39;t you want a way to see the info about your pen? Lets write a function to do that!</span>
+<span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="n">colour</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Colour : &quot;</span> <span class="o">+</span> <span class="n">colour</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size   : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">size</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kind   : &quot;</span> <span class="o">+</span> <span class="n">kind</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Owner  : &quot;</span> <span class="o">+</span> <span class="n">owner</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="n">display_information</span><span class="p">(</span><span class="n">pen_colour</span><span class="p">,</span> <span class="n">pen_size</span><span class="p">,</span> <span class="n">pen_kind</span><span class="p">,</span> <span class="n">pen_owner</span><span class="p">)</span>
+</code></pre></div>
+Sure, that would work for one pen, but some questions one might have are:</p>
+<ol>
+<li>What if you wanted to make an unknown number of pens? How would someone know how many variables to declare?</li>
+<li>What if you had a more complicated object with 100 properties? Would it be feasable to manually declare 100 variables for every object that you might need to create?</li>
+</ol>
+<p>This is where classes come into the picture. So far we have learnt about the primitive data types in python, primitive meaning that they are in-built, simple data types which python provides to us. Now we are moving on to custom data types, data types that are defined by you, the programmer!</p>
+<h3 id="22-what-are-classes-and-why-do-we-need-them">2.2. <em>What are classes, and why do we need them?</em><a class="headerlink" href="#22-what-are-classes-and-why-do-we-need-them" title="Permanent link">&para;</a></h3>
+<p>So now, we want to create our own data types, a data type that would allow us to describe a pen, or any other object effectively, using code. This is exactly what a class allows us to do!</p>
+<p>A class is basically a blue-print for creating an object, it tells us the defining properties of the object, and it also tells us what functions the object can perform. Following the class blue-print allows us to create "instances" of that class.</p>
+<p>An object of a class, the realisation of the blueprint, is known as an instance of the class.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pen</span><span class="p">:</span>
+
+    <span class="c1"># remember the properties of the pen we discussed? A colour, a size, a kind, an owner</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">pen</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">sz</span><span class="p">,</span> <span class="n">knd</span><span class="p">,</span> <span class="n">own</span><span class="p">):</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">colour</span> <span class="o">=</span> <span class="n">col</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">sz</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">knd</span>
+        <span class="n">pen</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="n">own</span>
+
+    <span class="c1"># This special function __init__ is known as a constructor, this is the &quot;method&quot; by which the object will be &quot;constructed&quot;,</span>
+    <span class="c1"># this is the essence of the blue-print!</span>
+
+
+    <span class="c1"># wouldn&#39;t you want a way to see the properties of a pen you made as well?</span>
+    <span class="c1"># you can write functions in a class that can work with the instances of the class. These functions are known as &#39;member</span>
+    <span class="c1"># functions&#39; of the class or &#39;methods&#39;.</span>
+
+    <span class="c1"># methods are always functions that work on objects of a specific class. A method cannot be used without an object</span>
+
+    <span class="c1"># All methods of a class are unique to that class, and cannot be used on objects from other classes!</span>
+    <span class="c1"># for example, you could have a method called read() that reads the contents of a text book but you</span>
+    <span class="c1"># cannot use that method on a pen, because it doesn&#39;t make sense to read a pen!</span>
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="n">pen</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Colour : &quot;</span> <span class="o">+</span> <span class="n">pen</span><span class="o">.</span><span class="n">colour</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size   : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">pen</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kind   : &quot;</span> <span class="o">+</span> <span class="n">pen</span><span class="o">.</span><span class="n">kind</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Owner  : &quot;</span> <span class="o">+</span> <span class="n">pen</span><span class="o">.</span><span class="n">owner</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># But a class is just a blue-print for creating a pen, it tells us which properties a pen is supposed to have</span>
+<span class="c1"># But it is NOT the pen itself!</span>
+<span class="c1"># To actually create a pen, we need to use the blue-print and specify all the properties of the specifc pen we want to create:</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">Pen</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s2">&quot;marker&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">)</span>
+<span class="c1"># When we do this, python calls the constructor and says, hey constructor,</span>
+<span class="c1"># construct me a Pen with its colour as &quot;red&quot;, its size as 0.5, its kind as &quot;marker&quot; and let its owner be &quot;John&quot;</span>
+<span class="c1"># this process of creating an object from its class is known as instantiation</span>
+
+<span class="n">A</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+<span class="c1"># display this marker&#39;s information</span>
+
+<span class="c1"># And now that we actually have a pen class, remember that we can make AS MANY pens as we want!</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">Pen</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;ball&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">Pen</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="s2">&quot;fountain&quot;</span><span class="p">,</span> <span class="s2">&quot;Robin&quot;</span><span class="p">)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">Pen</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;gel&quot;</span><span class="p">,</span> <span class="s2">&quot;Joe&quot;</span><span class="p">)</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">Pen</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;gel&quot;</span><span class="p">,</span> <span class="s2">&quot;Robert&quot;</span><span class="p">)</span>
+
+<span class="c1"># since a method works on a particular instance of a class, it must be called by using the dot operator, on that specific object.</span>
+<span class="n">B</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+<span class="n">C</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+<span class="n">D</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+<span class="n">E</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="23-classes-conventionally">2.3. <em>Classes, conventionally</em><a class="headerlink" href="#23-classes-conventionally" title="Permanent link">&para;</a></h3>
+<p>All programmers mutually agree to follow some rules, called conventions that are not necessary, but nice to follow while writing classes and make your code more readable to a usual programmer:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pen</span><span class="p">:</span>
+
+    <span class="c1"># typically, the object is called &quot;self&quot; in the functions that work with it</span>
+    <span class="c1"># it is also common to give the same names to the function parameters as the properties of the object itself</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colour</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colour</span> <span class="o">=</span> <span class="n">colour</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="n">owner</span>
+
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Colour : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">colour</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size   : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kind   : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Owner  : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="24-excersise-write-a-class-that-describes-a-bicycle-object">2.4. <em>Excersise: Write a class that describes a bicycle object</em><a class="headerlink" href="#24-excersise-write-a-class-that-describes-a-bicycle-object" title="Permanent link">&para;</a></h3>
+<p>Which properties should a bicycle object have?</p>
+<ol>
+<li>Colour (red, blue, white, etc)</li>
+<li>Material (steel, aluminum, plastic, wood, etc)</li>
+<li>Size (small, medium, large)</li>
+<li>Height of the seat (in m)</li>
+<li>Gear ratio (1, 2.5, 4, etc)</li>
+<li>Diameter of the wheels (in cm)</li>
+<li>Does it have a basket</li>
+<li>Does it have a Bell</li>
+<li>Do its wheels have sufficient air</li>
+<li>Is the chain of the bicycle routed properly</li>
+</ol>
+<p>What functions should a bicycle have?</p>
+<ol>
+<li>Change gear ratio</li>
+<li>Adjust seat height</li>
+<li>Route chain</li>
+<li>Pump air into the wheels</li>
+<li>
+<p>Find the speed of the bicycle (in m/s) when a peddling speed (in rpm) is provided</p>
+<p>(Hint: The speed of a bicycle with a peddling speed in rpm is given by:
+<code>(peddling_speed/60)*gear_ratio*((2*π*wheel_diameter/2)/100)</code>)</p>
+</li>
+</ol>
+<p>Would you make this with or without using a class?</p>
+<h3 id="25-what-makes-classes-so-good">2.5. <em>What makes classes so good?</em><a class="headerlink" href="#25-what-makes-classes-so-good" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Reusability: The same class can be used to make as many objects as you want</li>
+<li>Modularity: The code becomes incredibly modular, and it is easy for a programmer to debug the code in case there are any bugs</li>
+<li>Clarity of code: Due to the code being modular, it is easier for others to read and understand the code</li>
+<li>Better organisation: The data can be clearly and neatly organised for more complex objects</li>
+<li>
+<p>Data Abstraction: This is the process of hiding the implementation details from the user, allowing them to focus on the functionality instead.</p>
+<p>Example: you don't need to know a smartphone works internally to be able to use it. The details about its circuits, its workings are hidden from you, the user! Instead, the smartphone provides you with functions (call, message, surf the internet) only.</p>
+<p>Example in python:
+The functions like <code>math.sin()</code> and <code>math.cos()</code> can be used to find out the sine or cosine of an angle, but they do not tell you how the calcualtion is actually done. Those implementation details are hidden from you, the user and you only need to focus on the functionality!</p>
+</li>
+</ol>
+<h3 id="26-an-object-can-also-have-other-objects-as-its-properties">2.6. <em>An object can also have other objects as its properties</em><a class="headerlink" href="#26-an-object-can-also-have-other-objects-as-its-properties" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pen</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colour</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colour</span> <span class="o">=</span> <span class="n">colour</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="n">owner</span>
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Colour : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">colour</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size   : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kind   : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">kind</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Owner  : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+<span class="k">class</span> <span class="nc">Pencil</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">colour</span><span class="p">,</span> <span class="n">shade</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colour</span> <span class="o">=</span> <span class="n">colour</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shade</span> <span class="o">=</span> <span class="n">shade</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="n">owner</span>
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Colour : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">colour</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shade  : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shade</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Owner  : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">owner</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">Stationary</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pen</span><span class="p">,</span> <span class="n">pencil</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pen</span> <span class="o">=</span> <span class="n">pen</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pencil</span> <span class="o">=</span> <span class="n">pencil</span>
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Pen: &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pen</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Pencil: &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pencil</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">Stationary</span><span class="p">(</span><span class="n">Pen</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;ball&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">),</span> <span class="n">Pencil</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;HB&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">))</span>
+<span class="n">A</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="3-inheritance">3. Inheritance<a class="headerlink" href="#3-inheritance" title="Permanent link">&para;</a></h2>
+<h3 id="31-what-is-inheritance-and-why-do-we-need-it">3.1. <em>What is inheritance, and why do we need it?</em><a class="headerlink" href="#31-what-is-inheritance-and-why-do-we-need-it" title="Permanent link">&para;</a></h3>
+<p>Lets say that there is a Person. Now each person has some defining properties, like their name, age, sex, height, weight. A person could be a student and in that case, they would have some additional defining properties, for example the school they attend, their id number, their year, their section and their seat number.</p>
+<p>Now imagine that you are a programmer trying to describe a student using code... how could you go about writing code that expresses these properties discussed above? Keep in mind that a <code>class Person</code> with the properties name, age, sex, height and weight already exists.</p>
+<p>You might think of a few different things that can be done here:</p>
+<p>One option is to have a <code>person</code> object as a part of the <code>student</code> object, like so:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sex</span> <span class="o">=</span> <span class="n">sex</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name   : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Age    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sex    : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Height : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weight : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">))</span>
+
+<span class="k">class</span> <span class="nc">Student1</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">person</span><span class="p">,</span> <span class="n">school</span><span class="p">,</span> <span class="n">id_no</span><span class="p">,</span> <span class="n">seat_no</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">section</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">person</span> <span class="o">=</span> <span class="n">person</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">school</span> <span class="o">=</span> <span class="n">school</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_no</span> <span class="o">=</span> <span class="n">id_no</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seat_no</span> <span class="o">=</span> <span class="n">seat_no</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">section</span> <span class="o">=</span> <span class="n">section</span>
+
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">person</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;School  : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">school</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ID      : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_no</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seat    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seat_no</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Year    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Section : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">Student1</span><span class="p">(</span><span class="n">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span> <span class="s2">&quot;SUTD&quot;</span><span class="p">,</span> <span class="mi">1024</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">person</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;&#39;s age: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">person</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+<span class="n">A</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+</code></pre></div>
+<p>Another option might be to declare all of the properties of a <code>person</code> again along with the additional properties of a <code>student</code>
+<div class="highlight"><pre><span></span><code><span class="c1"># class Person here is unused, basically making the already existing class redundant</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sex</span> <span class="o">=</span> <span class="n">sex</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name   : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Age    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sex    : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Height : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weight : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">))</span>
+
+<span class="k">class</span> <span class="nc">Student2</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">school</span><span class="p">,</span> <span class="n">id_no</span><span class="p">,</span> <span class="n">seat_no</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">section</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sex</span> <span class="o">=</span> <span class="n">sex</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">school</span> <span class="o">=</span> <span class="n">school</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_no</span> <span class="o">=</span> <span class="n">id_no</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seat_no</span> <span class="o">=</span> <span class="n">seat_no</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">section</span> <span class="o">=</span> <span class="n">section</span>
+
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name   : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Age    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sex    : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Height : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weight : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;School  : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">school</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ID      : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_no</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seat    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seat_no</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Year    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Section : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># when there are a lot of function parameters, it is nice to specify which parameters correspond to what</span>
+<span class="c1"># values for better readability and clarity</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">Student2</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Robert&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span> <span class="n">sex</span> <span class="o">=</span> <span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="mi">65</span><span class="p">,</span> <span class="n">school</span> <span class="o">=</span> <span class="s2">&quot;SUTD&quot;</span><span class="p">,</span> <span class="n">id_no</span> <span class="o">=</span> <span class="mi">1025</span><span class="p">,</span> <span class="n">seat_no</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">section</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;&#39;s age: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+<span class="n">B</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+</code></pre></div>
+The first approach works, but the syntax looks a bit unintuitive, doesn't it?</p>
+<p>This is because to create a student object, you have to first make a Person object and then provide that person object to the student constructor, like so <code>A = Student1(Person("John", 15, "male", 170, 70), "SUTD", 1024, 32, 2, "A")</code></p>
+<p>Also, to access a student's name and age, you have to do <code>A.person.name</code> and <code>A.person.age</code>... wouldn't <code>A.name</code> and <code>A.age</code> make more sense?</p>
+<p>The 2<sup>nd</sup> approach fixes this issue but it is also a bit tedious because you have to manually declare all properties of a person inside the student constructor... What if there were not 5, but 100 different properties associated with a person? It would be too unfeasable to manually rewrite them.</p>
+<p>This is where inheritance comes into the picture. Inheritance literally allows us to "inherit" the properties of one class (called the super class) into another class (called the sub class)</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Super/Parent class</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sex</span> <span class="o">=</span> <span class="n">sex</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span>
+
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name   : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Age    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sex    : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Height : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weight : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">))</span>
+
+<span class="c1"># Base/Sub class</span>
+<span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">school</span><span class="p">,</span> <span class="n">id_no</span><span class="p">,</span> <span class="n">seat_no</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">section</span><span class="p">):</span>
+        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">school</span> <span class="o">=</span> <span class="n">school</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_no</span> <span class="o">=</span> <span class="n">id_no</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seat_no</span> <span class="o">=</span> <span class="n">seat_no</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">section</span> <span class="o">=</span> <span class="n">section</span>
+
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Person</span><span class="o">.</span><span class="n">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;School  : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">school</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ID      : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id_no</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seat    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seat_no</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Year    : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Section : &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">section</span><span class="p">)</span>
+
+<span class="c1"># when there are a lot of function parameters, it is nice to specify which parameters correspond to what</span>
+<span class="c1"># values for better readability and clarity</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Robin&quot;</span><span class="p">,</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span> <span class="n">sex</span> <span class="o">=</span> <span class="s2">&quot;male&quot;</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">180</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="mi">75</span><span class="p">,</span> <span class="n">school</span> <span class="o">=</span> <span class="s2">&quot;SUTD&quot;</span><span class="p">,</span> <span class="n">id_no</span> <span class="o">=</span> <span class="mi">1023</span><span class="p">,</span> <span class="n">seat_no</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">section</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;&#39;s age: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+<span class="n">A</span><span class="o">.</span><span class="n">display_information</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="32-excersise-given-a-class-computer-write-a-subclass-laptop-and-desktop-with-the-given-additional-properties">3.2 Excersise: Given a class computer, Write a subclass laptop and desktop with the given additional properties:<a class="headerlink" href="#32-excersise-given-a-class-computer-write-a-subclass-laptop-and-desktop-with-the-given-additional-properties" title="Permanent link">&para;</a></h3>
+<p>A computer object has the following properties:</p>
+<ol>
+<li>CPU Type</li>
+<li>Storage Type</li>
+<li>Storage Quantity (in GB)</li>
+<li>RAM (in GB)</li>
+<li>GPU Type</li>
+</ol>
+<p>Write a class for laptop and desktop objecta that have the above properties, and the additional properties listed below:</p>
+<p>Desktop:</p>
+<ol>
+<li>Monitor</li>
+<li>Monitor Resolution</li>
+<li>Keyboard</li>
+<li>Mouse</li>
+</ol>
+<p>Laptop:</p>
+<ol>
+<li>Monitor Resolution</li>
+<li>is it a touchscreen?</li>
+</ol>
+<p>Also write a function that displays all this information</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Computer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cpu</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">storage_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">storage</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">ram</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">gpu</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+
+        <span class="c1"># type hints can also be given to a class&#39; data members</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cpu</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">cpu</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">storage_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">storage_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">storage</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ram</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">ram</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gpu</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">gpu</span>
+
+    <span class="k">def</span> <span class="nf">display_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The CPU type is     : &quot;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">cpu</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Storage type is : &quot;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">storage_type</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Stroage is      : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The RAM is          : &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ram</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The GPU is          : &quot;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">gpu</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../git_example/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Example" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Example
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../Day_3/web_basics/" class="md-footer__link md-footer__link--next" aria-label="Next: Web Basics" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Web Basics
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Digital Design and Development Club (3DC) &copy; 2019 - 2021. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/3DCdsc" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.twitch.tv/3dcdsc" target="_blank" rel="noopener" title="www.twitch.tv" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M391.17 103.47h-38.63v109.7h38.63ZM285 103h-38.63v109.75H285ZM120.83 0 24.31 91.42v329.16h115.83V512l96.53-91.42h77.25L487.69 256V0Zm328.24 237.75-77.22 73.12h-77.24l-67.6 64v-64h-86.87V36.58h308.93Z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCF56lQD1HWv-0uOQSXrTmLw" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.instagram.com/sutd3dc/" target="_blank" rel="noopener" title="www.instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://t.me/joinchat/C_Nni1C77ZlOVTdjU4yf4Q" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
